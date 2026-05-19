@@ -1,0 +1,49 @@
+import React from "react";
+import Link from "next/link";
+import { navItems } from "@/lib/constants";
+
+export default function Footer() {
+  return (
+    <footer className="bg-primary-bg text-warm-white px-4 md:px-8 py-12 md:py-16">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+          <div className="flex flex-col gap-3 max-w-sm">
+            <Link
+              href="/"
+              className="font-serif text-xl text-warm-white hover:text-accent-orange transition-colors duration-200"
+            >
+              Chris Smith
+            </Link>
+            <span className="font-sans text-sm text-warm-white/60 font-medium tracking-wide uppercase">
+              Real Work Learning
+            </span>
+            <p className="font-sans text-sm text-warm-white/60 leading-relaxed">
+              Practical workshops, AI training, leadership development, and
+              training systems for real teams doing real work.
+            </p>
+          </div>
+          <nav aria-label="Footer navigation">
+            <ul className="flex flex-col gap-3">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="font-sans text-sm text-warm-white/60 hover:text-accent-orange transition-colors duration-200"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+        <div className="border-t border-warm-white/10 mt-10 pt-6">
+          <p className="font-sans text-xs text-warm-white/40">
+            &copy; {new Date().getFullYear()} Chris Smith | Real Work Learning.
+            All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}

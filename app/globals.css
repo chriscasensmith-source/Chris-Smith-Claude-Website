@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ──────────────────────────────────────────────────────── */
+
+@theme {
+  /* Colors */
+  --color-primary-bg: #061B2A;
+  --color-near-black: #080A0C;
+  --color-dark-text: #111111;
+  --color-warm-white: #F5F1EA;
+  --color-soft-white: #F8F6F1;
+  --color-accent-orange: #FF5A1F;
+  --color-sand: #E9D7C0;
+  --color-soft-pink: #F4B6D2;
+
+  /* Max widths */
+  --width-container: 1200px;
+  --width-prose: 700px;
+}
+
+@theme inline {
+  /* Fonts — reference CSS vars injected by next/font */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────── */
+
+@layer base {
+  html {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    color: #111111;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif), Georgia, serif;
+    letter-spacing: -0.3px;
+  }
+
+  /* Ensure body text meets 1.6 line-height */
+  p {
+    line-height: 1.65;
+  }
+}
