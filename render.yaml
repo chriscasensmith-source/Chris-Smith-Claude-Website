@@ -1,0 +1,19 @@
+# Render Blueprint — deploys this Next.js app as a Node web service.
+# In Render: New → Blueprint → pick this repo. It reads this file.
+# After the first deploy, set NEXT_PUBLIC_SITE_URL to your live URL.
+services:
+  - type: web
+    name: chris-smith-real-work-learning
+    runtime: node
+    plan: free
+    branch: main
+    # --include=dev ensures build-time tools (TypeScript, Tailwind) install
+    # even if Render sets NODE_ENV=production.
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
