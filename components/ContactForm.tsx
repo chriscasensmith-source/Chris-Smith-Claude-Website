@@ -23,7 +23,7 @@ export default function ContactForm() {
   const [error, setError] = useState<string | null>(null);
 
   const keyConfigured =
-    WEB3FORMS_ACCESS_KEY !== "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY";
+    WEB3FORMS_ACCESS_KEY !== "4684c021-54a0-4dcf-bfba-a0d6cb4c5475";
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
