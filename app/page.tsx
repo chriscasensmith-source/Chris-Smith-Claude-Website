@@ -64,9 +64,10 @@ const stats = [
     description: "From Hillstone Restaurant Group to complex manufacturing environments.",
   },
   {
-    value: "5",
+    value: "Countless",
     label: "Bespoke AI tools built",
-    description: "For training, maintenance, knowledge capture, planning, and leadership.",
+    description:
+      "Including the Training Command Center, Skills Gap Analysis, SME Knowledge Capture, MRP Assistant, and a Difficult Conversation voice agent.",
   },
   {
     value: "6",
