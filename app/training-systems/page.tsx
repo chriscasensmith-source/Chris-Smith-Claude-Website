@@ -16,7 +16,7 @@ const systems = [
   },
   {
     title: "Trainer Guides",
-    desc: "Practical guides that help trainers explain tasks, demonstrate expectations, ask better questions, and evaluate readiness. Built so any qualified trainer can deliver consistent training — not just your best person.",
+    desc: "Practical guides that help trainers explain tasks, demonstrate expectations, ask better questions, and evaluate readiness. Built so any qualified trainer can deliver consistent training, not just your best person.",
   },
   {
     title: "Competency Checklists",
@@ -43,6 +43,8 @@ export default function TrainingSystemsPage() {
         label="Training Systems"
         heading="Training systems that help people learn the job, not just survive the first week."
         subtext="Good onboarding and job training need more than a checklist. Employees need to know what to learn, who to learn from, how they will be evaluated, and what good performance looks like. I help teams turn scattered documents, old binders, tribal knowledge, and informal shadowing into clear training systems."
+        imageSrc="/images/website3.png"
+        imageAlt="Hands-on training around equipment on the shop floor"
       />
 
       {/* System components */}
@@ -57,7 +59,7 @@ export default function TrainingSystemsPage() {
             </h2>
             <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/70">
               Most gaps in workplace training come down to missing structure. The
-              content exists — it just lives in people&rsquo;s heads, scattered
+              content exists. It just lives in people&rsquo;s heads, scattered
               documents, or outdated binders. These six components turn that
               scattered knowledge into something teachable and repeatable.
             </p>
@@ -94,7 +96,7 @@ export default function TrainingSystemsPage() {
               <p>
                 Most training systems break down not because the content is
                 wrong, but because they were built for how training
-                should happen — not for how it actually happens in a busy
+                should happen, not for how it actually happens in a busy
                 operation.
               </p>
               <p>
@@ -106,7 +108,7 @@ export default function TrainingSystemsPage() {
               </p>
               <p>
                 Every system I design is documented well enough that any
-                qualified trainer can teach it — not just the person who knows
+                qualified trainer can teach it, not just the person who knows
                 the most.
               </p>
             </div>

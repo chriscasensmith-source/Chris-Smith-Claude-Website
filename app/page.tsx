@@ -13,7 +13,7 @@ import { solutions, caseStudies } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Chris Smith | Real Work Learning",
   description:
-    "Training, facilitation, and AI enablement that people can actually use — plus bespoke AI tools built around how the work really happens.",
+    "Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.",
 };
 
 const pillars = [
@@ -42,7 +42,7 @@ const pillars = [
 const processSteps = [
   {
     title: "Start with the real workflow",
-    desc: "I learn how the work actually happens — the pressure, the handoffs, the workarounds — before building anything.",
+    desc: "I learn how the work actually happens: the pressure, the handoffs, and the workarounds, before building anything.",
   },
   {
     title: "Prototype fast",
@@ -50,7 +50,7 @@ const processSteps = [
   },
   {
     title: "Build in judgment and guardrails",
-    desc: "Safety gates, human review, and honest limits are designed in from the start — AI assists, people decide.",
+    desc: "Safety gates, human review, and honest limits are designed in from the start. AI assists; people decide.",
   },
   {
     title: "Hand off something usable",
@@ -93,8 +93,7 @@ export default function HomePage() {
                 actually use.
               </h1>
               <p className="font-sans text-base md:text-lg leading-relaxed text-warm-white/80">
-                I help teams learn faster, lead better, and adopt AI with
-                judgment — and I build practical tools when off-the-shelf
+                I help teams learn faster, lead better, and adopt AI with judgment, and I build practical tools when off-the-shelf
                 won&rsquo;t do.
               </p>
               <p className="font-serif text-xl text-accent-orange italic">
@@ -172,7 +171,7 @@ export default function HomePage() {
                 Most workplace training sounds good on paper and falls apart in
                 real life. I build workshops, onboarding, and training systems
                 that help people practice, talk through real situations, and
-                leave with tools they can use the same day — including
+                leave with tools they can use the same day, including
                 plain-language AI training that builds judgment, not just speed.
               </p>
               <div className="flex flex-wrap gap-3 pt-2">
@@ -247,7 +246,7 @@ export default function HomePage() {
               Real tools come from real workflows.
             </h2>
             <p className="font-sans text-base md:text-lg leading-relaxed text-warm-white/70">
-              I don&rsquo;t start with the technology. I start with the work —
+              I don&rsquo;t start with the technology. I start with the work,
               then build the smallest thing that genuinely helps.
             </p>
           </div>
@@ -278,10 +277,18 @@ export default function HomePage() {
       {/* ─── Impact ───────────────────────────────────────────────── */}
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
         <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
-          <SectionHeader
-            label="Impact"
-            heading="Operations experience behind every build."
-          />
+          <div className="flex flex-col gap-4">
+            <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
+              Impact
+            </span>
+            <h2 className="font-serif text-[28px] md:text-[44px] text-dark-text leading-tight">
+              Operations experience behind every build.
+            </h2>
+            <p className="font-sans text-base md:text-lg text-dark-text/70 leading-relaxed max-w-[760px]">
+              A decade running training in demanding operations shapes every
+              tool and workshop I deliver.
+            </p>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {stats.map((s) => (
               <StatCard
@@ -318,7 +325,7 @@ export default function HomePage() {
                 clear standards plus room to grow.
               </p>
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
-                Now I pair that operational discipline with practical AI —
+                Now I pair that operational discipline with practical AI,
                 helping teams learn and adopt AI with judgment, and building the
                 tools they need when nothing off-the-shelf fits.
               </p>
@@ -335,7 +342,7 @@ export default function HomePage() {
       {/* ─── Contact CTA ──────────────────────────────────────────── */}
       <CtaSection
         heading="Need training, facilitation, or a tool built for how your team really works?"
-        body="Whether it's a workshop, a stronger training system, AI enablement, or a custom tool — let's talk about what would actually move the needle."
+        body="Whether it's a workshop, a stronger training system, AI enablement, or a custom tool, let us talk about what would actually move the needle."
       />
     </>
   );

@@ -23,6 +23,8 @@ export default function AboutPage() {
       <PageHero
         label="About"
         heading="I build training for real people doing real work."
+        imageSrc="/images/website7.png"
+        imageAlt="Chris Smith presenting to a full room"
       />
 
       {/* Main copy */}
