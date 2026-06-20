@@ -7,6 +7,7 @@ import SolutionCard from "@/components/SolutionCard";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import StatCard from "@/components/StatCard";
 import CtaSection from "@/components/CtaSection";
+import Reveal from "@/components/Reveal";
 import { solutions, caseStudies } from "@/lib/projects";
 
 export const metadata: Metadata = {
@@ -123,7 +124,7 @@ export default function HomePage() {
 
       {/* ─── What I Do ────────────────────────────────────────────── */}
       <section className="bg-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <SectionHeader
             label="What I do"
             heading="Four ways I help teams do real work better."
@@ -146,13 +147,13 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── Training & Enablement ────────────────────────────────── */}
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <Reveal className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
               <Image
                 src="/images/website2.png"
@@ -186,7 +187,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -195,7 +196,7 @@ export default function HomePage() {
         id="solutions"
         className="scroll-mt-24 bg-warm-white py-20 md:py-28 px-4 md:px-8"
       >
-        <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <SectionHeader
             label="Bespoke AI solutions"
             heading="And when training needs a tool, I build it."
@@ -206,7 +207,7 @@ export default function HomePage() {
               <SolutionCard key={s.slug} solution={s} />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── Case Studies ─────────────────────────────────────────── */}
@@ -214,7 +215,7 @@ export default function HomePage() {
         id="case-studies"
         className="scroll-mt-24 bg-soft-white py-20 md:py-28 px-4 md:px-8"
       >
-        <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <SectionHeader
             label="Case studies"
             heading="A closer look at three of them."
@@ -229,7 +230,7 @@ export default function HomePage() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── How I Build ──────────────────────────────────────────── */}
@@ -237,7 +238,7 @@ export default function HomePage() {
         id="process"
         className="scroll-mt-24 bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8"
       >
-        <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <div className="flex flex-col gap-4 max-w-[700px]">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               How I build
@@ -271,12 +272,12 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── Impact ───────────────────────────────────────────────── */}
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <SectionHeader
             label="Impact"
             heading="Operations experience behind every build."
@@ -291,13 +292,13 @@ export default function HomePage() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── About ────────────────────────────────────────────────── */}
       <section className="bg-warm-white py-20 md:py-28 px-4 md:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid lg:grid-cols-[2fr_3fr] gap-12 items-center">
+          <Reveal className="grid lg:grid-cols-[2fr_3fr] gap-12 items-center">
             <div className="relative w-full max-w-[360px] aspect-[3/4] rounded-xl overflow-hidden shadow-sm mx-auto lg:mx-0">
               <Image
                 src="/images/Headshot.jpg"
@@ -327,7 +328,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 

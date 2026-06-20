@@ -16,10 +16,37 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteName = "Chris Smith | Real Work Learning";
+const siteDescription =
+  "Training, facilitation, and AI enablement that people can actually use — plus bespoke AI tools built around how the work really happens.";
+
 export const metadata: Metadata = {
-  title: "Chris Smith | Real Work Learning",
-  description:
-    "Practical workshops, AI training, leadership development, onboarding, and training systems for real teams doing real work.",
+  // Set NEXT_PUBLIC_SITE_URL in your deployment for correct absolute URLs in
+  // Open Graph tags and the sitemap. Falls back to localhost for local dev.
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
+  title: siteName,
+  description: siteDescription,
+  openGraph: {
+    title: siteName,
+    description: siteDescription,
+    type: "website",
+    images: [
+      {
+        url: "/images/panel3.jpg",
+        width: 2048,
+        height: 1365,
+        alt: "Chris Smith speaking on stage",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description: siteDescription,
+    images: ["/images/panel3.jpg"],
+  },
 };
 
 export default function RootLayout({
