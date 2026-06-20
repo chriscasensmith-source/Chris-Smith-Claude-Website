@@ -10,21 +10,16 @@ import CtaSection from "@/components/CtaSection";
 import { solutions, caseStudies } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Chris Smith | AI Tools for Real Operations",
+  title: "Chris Smith | Real Work Learning",
   description:
-    "Chris Smith builds practical AI and workflow tools for operations, training, maintenance, and manufacturing — and trains the teams that use them.",
+    "Training, facilitation, and AI enablement that people can actually use — plus bespoke AI tools built around how the work really happens.",
 };
 
 const pillars = [
   {
-    title: "Bespoke AI Solutions",
-    desc: "Custom AI and workflow tools that solve real operations, maintenance, and training problems.",
-    href: "#solutions",
-  },
-  {
-    title: "AI Training",
-    desc: "Plain-language AI workshops that help teams use tools with judgment, not hype.",
-    href: "/ai-training",
+    title: "Facilitation & Workshops",
+    desc: "Interactive sessions on leadership, communication, AI, and team development.",
+    href: "/workshops",
   },
   {
     title: "Training Solutions",
@@ -32,9 +27,14 @@ const pillars = [
     href: "/training-systems",
   },
   {
-    title: "Facilitation & Workshops",
-    desc: "Interactive sessions on leadership, communication, and team development.",
-    href: "/workshops",
+    title: "AI Training",
+    desc: "Plain-language AI workshops that help teams use tools with judgment, not hype.",
+    href: "/ai-training",
+  },
+  {
+    title: "Bespoke AI Solutions",
+    desc: "Custom AI and workflow tools that solve real operations, maintenance, and training problems.",
+    href: "#solutions",
   },
 ];
 
@@ -84,24 +84,24 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6">
               <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
-                AI for real operations
+                Real Work Learning
               </span>
               <h1 className="font-serif text-[32px] md:text-[56px] leading-tight">
-                I build practical AI tools that solve real operations, training,
-                and maintenance problems.
+                Training, facilitation, and AI enablement that people can
+                actually use.
               </h1>
               <p className="font-sans text-base md:text-lg leading-relaxed text-warm-white/80">
-                Part operator, part builder. I design bespoke AI and workflow
-                tools — and train the teams that use them — for manufacturing,
-                maintenance, and frontline environments.
+                I help teams learn faster, lead better, and adopt AI with
+                judgment — and I build practical tools when off-the-shelf
+                won&rsquo;t do.
               </p>
               <p className="font-serif text-xl text-accent-orange italic">
-                Built for the floor, not the demo.
+                Less lecture. More practice. Better results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Button href="#solutions">See the Solutions</Button>
-                <Button href="#process" variant="ghost">
-                  How I Build
+                <Button href="/contact">Start a Conversation</Button>
+                <Button href="/services" variant="ghost">
+                  View Services
                 </Button>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function HomePage() {
           <SectionHeader
             label="What I do"
             heading="Four ways I help teams do real work better."
-            subtext="From custom AI tools to hands-on workshops, everything I build is grounded in how the work actually happens."
+            subtext="From hands-on workshops to custom AI tools, everything I do is grounded in how the work actually happens."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {pillars.map((p) => (
@@ -148,16 +148,57 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── Training & Enablement ────────────────────────────────── */}
+      <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
+              <Image
+                src="/images/website2.png"
+                alt="Chris Smith facilitating a hands-on training workshop"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="flex flex-col gap-6">
+              <SectionHeader
+                label="Training & enablement"
+                heading="Practical learning that connects to the job."
+              />
+              <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
+                Most workplace training sounds good on paper and falls apart in
+                real life. I build workshops, onboarding, and training systems
+                that help people practice, talk through real situations, and
+                leave with tools they can use the same day — including
+                plain-language AI training that builds judgment, not just speed.
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button href="/workshops" variant="secondary">
+                  Workshops
+                </Button>
+                <Button href="/training-systems" variant="secondary">
+                  Training Systems
+                </Button>
+                <Button href="/ai-training" variant="secondary">
+                  AI Training
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── Featured AI Solutions ────────────────────────────────── */}
       <section
         id="solutions"
-        className="scroll-mt-24 bg-soft-white py-20 md:py-28 px-4 md:px-8"
+        className="scroll-mt-24 bg-warm-white py-20 md:py-28 px-4 md:px-8"
       >
         <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <SectionHeader
-            label="Featured AI solutions"
-            heading="Tools I've built for real work."
-            subtext="Bespoke AI and workflow tools designed for operations, training, maintenance, and manufacturing teams."
+            label="Bespoke AI solutions"
+            heading="And when training needs a tool, I build it."
+            subtext="Custom AI and workflow tools I've designed for operations, training, maintenance, and manufacturing teams."
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {solutions.map((s) => (
@@ -170,7 +211,7 @@ export default function HomePage() {
       {/* ─── Case Studies ─────────────────────────────────────────── */}
       <section
         id="case-studies"
-        className="scroll-mt-24 bg-warm-white py-20 md:py-28 px-4 md:px-8"
+        className="scroll-mt-24 bg-soft-white py-20 md:py-28 px-4 md:px-8"
       >
         <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <SectionHeader
@@ -232,57 +273,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Training & Enablement ────────────────────────────────── */}
-      <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-              <Image
-                src="/images/website2.png"
-                alt="Chris Smith facilitating a hands-on training workshop"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="flex flex-col gap-6">
-              <SectionHeader
-                label="Training & enablement"
-                heading="Beyond the tools, I help teams actually adopt AI."
-              />
-              <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
-                The best tool still needs people who trust it and know how to use
-                it well. I run plain-language AI workshops, design onboarding and
-                training systems, and develop the trainers who keep it all
-                running — so adoption sticks.
-              </p>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <Button href="/ai-training" variant="secondary">
-                  AI Training
-                </Button>
-                <Button href="/workshops" variant="secondary">
-                  Workshops
-                </Button>
-                <Button href="/training-systems" variant="secondary">
-                  Training Systems
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── Impact ───────────────────────────────────────────────── */}
-      <section className="bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8">
+      <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
-          <div className="flex flex-col gap-4 max-w-[700px]">
-            <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
-              Impact
-            </span>
-            <h2 className="font-serif text-[24px] md:text-[40px] leading-snug">
-              Operations experience behind every build.
-            </h2>
-          </div>
+          <SectionHeader
+            label="Impact"
+            heading="Operations experience behind every build."
+          />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {stats.map((s) => (
               <StatCard
@@ -310,17 +307,18 @@ export default function HomePage() {
               />
             </div>
             <div className="flex flex-col gap-6">
-              <SectionHeader label="About" heading="An operator who builds." />
+              <SectionHeader label="About" heading="An operator who teaches and builds." />
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
                 I spent ten years managing training operations at Hillstone
                 Restaurant Group, then moved into broader operations, workforce
                 development, and technical training across complex environments.
-                That foundation shapes how I build: structure plus humanity,
+                That foundation shapes how I work: structure plus humanity,
                 clear standards plus room to grow.
               </p>
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
-                Now I pair that operational discipline with practical AI — building
-                the tools real teams need and helping them use AI with judgment.
+                Now I pair that operational discipline with practical AI —
+                helping teams learn and adopt AI with judgment, and building the
+                tools they need when nothing off-the-shelf fits.
               </p>
               <div className="pt-2">
                 <Button href="/about" variant="secondary">
@@ -334,8 +332,8 @@ export default function HomePage() {
 
       {/* ─── Contact CTA ──────────────────────────────────────────── */}
       <CtaSection
-        heading="Have a real operations problem worth solving?"
-        body="Whether you need a custom AI tool, help adopting AI, or a stronger training system — let's talk about what would actually move the needle."
+        heading="Need training, facilitation, or a tool built for how your team really works?"
+        body="Whether it's a workshop, a stronger training system, AI enablement, or a custom tool — let's talk about what would actually move the needle."
       />
     </>
   );
