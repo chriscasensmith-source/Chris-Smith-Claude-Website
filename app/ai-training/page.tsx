@@ -28,7 +28,7 @@ const sessions = [
   },
   {
     title: "AI Assisted Root Cause Thinking",
-    desc: "A practical session showing how AI can support investigation thinking by helping organize facts, ask better questions, and explore possible causes — without replacing human judgment.",
+    desc: "A practical session showing how AI can support investigation thinking by helping organize facts, ask better questions, and explore possible causes, without replacing human judgment.",
     length: "90 to 120 minutes",
   },
 ];
@@ -52,6 +52,8 @@ export default function AITrainingPage() {
         label="AI Training"
         heading="AI training for teams that need practical help, not hype."
         subtext="AI can help people work faster, think through problems, improve communication, and build better training materials. It can also create bad habits when people use it without judgment. My AI workshops help employees and leaders understand both sides."
+        imageSrc="/images/website5.png"
+        imageAlt="An AI training session in progress"
       />
 
       {/* Sessions */}
@@ -133,7 +135,7 @@ export default function AITrainingPage() {
               </p>
               <p>
                 The goal is not to make people dependent on AI. The goal is to
-                help them use it wisely — as a thinking tool and a time saver,
+                help them use it wisely, as a thinking tool and a time saver,
                 not a replacement for experience and care.
               </p>
               <p>

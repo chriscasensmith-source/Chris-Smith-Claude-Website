@@ -9,6 +9,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  // The "Start a Conversation" CTA already links to /contact, so drop the
+  // duplicate Contact text link from the nav.
+  const linkItems = navItems.filter((item) => item.href !== "/contact");
+
   return (
     <>
       <header className="sticky top-0 z-50 px-4 py-3 md:py-4">
@@ -25,7 +29,7 @@ export default function Navbar() {
           </Link>
 
           <ul className="flex items-center gap-4 lg:gap-6">
-            {navItems.map((item) => (
+            {linkItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -117,7 +121,7 @@ export default function Navbar() {
           {/* Overlay nav links */}
           <nav className="flex-1 flex flex-col justify-center px-8">
             <ul className="flex flex-col">
-              {navItems.map((item) => (
+              {linkItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

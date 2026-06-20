@@ -18,7 +18,7 @@ const inter = Inter({
 
 const siteName = "Chris Smith | Real Work Learning";
 const siteDescription =
-  "Training, facilitation, and AI enablement that people can actually use — plus bespoke AI tools built around how the work really happens.";
+  "Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.";
 
 export const metadata: Metadata = {
   // Set NEXT_PUBLIC_SITE_URL in your deployment for correct absolute URLs in

@@ -166,6 +166,8 @@ export default function ServicesPage() {
         label="Services"
         heading="Practical training and facilitation services for real workplace needs."
         subtext="Whether you need a 90 minute workshop, a new onboarding program, a stronger training structure, or help making AI useful for your team, I can help turn the idea into something clear, engaging, and ready to use."
+        imageSrc="/images/website4.png"
+        imageAlt="Chris Smith presenting to a group during a session"
       />
 
       {services.map((service, i) => (
