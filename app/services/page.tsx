@@ -177,8 +177,8 @@ export default function ServicesPage() {
             i % 2 === 0 ? "bg-warm-white" : "bg-soft-white"
           }`}
         >
-          <div className="max-w-[1200px] mx-auto flex flex-col gap-10">
-            <div className="flex flex-col gap-3 max-w-[700px]">
+          <div className="max-w-[1200px] mx-auto grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-16">
+            <div className="flex flex-col gap-3 lg:sticky lg:top-24 self-start">
               <h2 className="font-serif text-[24px] md:text-[40px] text-dark-text leading-snug">
                 {service.title}
               </h2>
@@ -195,7 +195,7 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-2 gap-8">
               <div className="flex flex-col gap-4">
                 <span className="text-accent-orange text-xs font-sans font-medium uppercase tracking-wider">
                   Common deliverables
