@@ -3,14 +3,11 @@
 import React, { useState } from "react";
 
 // Web3Forms delivers submissions straight to the email tied to this key.
-// This access key is PUBLIC and safe to ship in client code.
-//
-// To activate: create a free key at https://web3forms.com (enter the Gmail
-// address you want submissions sent to), then paste it below — or set
-// NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in your deployment.
+// This access key is PUBLIC and safe to ship in client code. Override it
+// per-environment with NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY if needed.
 const WEB3FORMS_ACCESS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ??
-  "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY";
+  "4684c021-54a0-4dcf-bfba-a0d6cb4c5475";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -21,9 +18,6 @@ const labelClass = "font-sans text-sm font-medium text-dark-text";
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
-
-  const keyConfigured =
-    WEB3FORMS_ACCESS_KEY !== "4684c021-54a0-4dcf-bfba-a0d6cb4c5475";
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -212,13 +206,6 @@ export default function ContactForm() {
         {status === "error" && error && (
           <p role="alert" className="font-sans text-sm text-accent-orange">
             {error}
-          </p>
-        )}
-
-        {!keyConfigured && (
-          <p className="font-sans text-xs text-dark-text/50">
-            Note: add your Web3Forms access key to enable delivery (see
-            ContactForm.tsx).
           </p>
         )}
 
