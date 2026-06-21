@@ -23,9 +23,9 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-primary-bg text-warm-white py-24 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-6">
+      <section className="bg-primary-bg text-warm-white pt-10 pb-14 md:py-28 px-4 md:px-8">
+        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="flex flex-col gap-6 order-2 lg:order-1">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               Contact
             </span>
@@ -43,7 +43,7 @@ export default function ContactPage() {
               is enough to start.
             </p>
           </div>
-          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+          <div className="relative w-full aspect-[16/10] lg:aspect-[4/3] rounded-xl overflow-hidden shadow-md order-1 lg:order-2">
             <Image
               src="/images/website7.png"
               alt="A full room during one of Chris Smith's training sessions"
