@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Card from "@/components/Card";
-import Button from "@/components/Button";
+import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
   title: "Training Systems | Real Work Learning",
@@ -50,7 +50,7 @@ export default function TrainingSystemsPage() {
       {/* System components */}
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
-          <div className="flex flex-col gap-3 max-w-[700px]">
+          <div className="flex flex-col gap-3 max-w-[760px] mx-auto items-center text-center">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               What I build
             </span>
@@ -116,23 +116,10 @@ export default function TrainingSystemsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col gap-6 max-w-[600px]">
-            <h2 className="font-serif text-[24px] md:text-[40px] leading-snug">
-              Need a training system that actually holds up in real conditions?
-            </h2>
-            <p className="font-sans text-base md:text-lg leading-relaxed text-warm-white/70">
-              Let&rsquo;s talk about your onboarding, your team, and what
-              better structure would make possible.
-            </p>
-            <div className="pt-2">
-              <Button href="/contact">Start a Conversation</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CtaSection
+        heading="Need a training system that actually holds up in real conditions?"
+        body="Let's talk about your onboarding, your team, and what better structure would make possible."
+      />
     </>
   );
 }
