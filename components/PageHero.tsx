@@ -38,16 +38,17 @@ export default function PageHero({
   );
 
   return (
-    <section className="bg-primary-bg text-warm-white px-4 md:px-8 py-24 md:py-28">
+    <section className="bg-primary-bg text-warm-white px-4 md:px-8 pt-10 pb-14 md:py-28">
       <div className="max-w-[1200px] mx-auto">
         {imageSrc ? (
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {textContent}
-            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 md:order-1">{textContent}</div>
+            <div className="relative w-full aspect-[16/10] md:aspect-[4/3] rounded-lg overflow-hidden order-1 md:order-2">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
                 fill
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
                 priority
               />
