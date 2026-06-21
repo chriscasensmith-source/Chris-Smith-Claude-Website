@@ -20,12 +20,9 @@ export default function Navbar() {
         <nav className="hidden md:flex max-w-[1200px] mx-auto bg-primary-bg/95 backdrop-blur-sm rounded-full px-6 lg:px-8 items-center justify-between h-14 shadow-md">
           <Link
             href="/"
-            className="font-serif text-warm-white font-semibold whitespace-nowrap shrink-0"
+            className="font-serif text-warm-white font-semibold whitespace-nowrap shrink-0 text-base lg:text-lg"
           >
-            <span className="hidden xl:inline text-sm">
-              Chris Smith | Real Work Learning
-            </span>
-            <span className="xl:hidden text-base">Chris Smith</span>
+            Real Work Learning
           </Link>
 
           <ul className="flex items-center gap-4 lg:gap-6">
@@ -59,7 +56,7 @@ export default function Navbar() {
             href="/"
             className="font-serif text-warm-white text-base font-semibold"
           >
-            Chris Smith
+            Real Work Learning
           </Link>
           <button
             type="button"
@@ -94,7 +91,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="font-serif text-warm-white text-lg font-semibold"
             >
-              Chris Smith
+              Real Work Learning
             </Link>
             <button
               type="button"

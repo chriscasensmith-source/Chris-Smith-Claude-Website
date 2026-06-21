@@ -11,7 +11,7 @@ import Reveal from "@/components/Reveal";
 import { solutions, caseStudies } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Chris Smith | Real Work Learning",
+  title: "Real Work Learning | Training, Facilitation & AI Enablement",
   description:
     "Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.",
 };
@@ -80,10 +80,10 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─────────────────────────────────────────────────── */}
-      <section className="bg-primary-bg text-warm-white py-24 md:py-32 px-4 md:px-8">
+      <section className="bg-primary-bg text-warm-white pt-10 pb-16 md:py-32 px-4 md:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col gap-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="flex flex-col gap-6 order-2 lg:order-1">
               <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
                 Real Work Learning
               </span>
@@ -106,7 +106,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden shadow-md">
+            <div className="relative w-full aspect-[16/10] lg:aspect-[3/2] rounded-xl overflow-hidden shadow-md order-1 lg:order-2">
               <Image
                 src="/images/panel3.jpg"
                 alt="Chris Smith speaking on stage at a Texas State Technical College panel"

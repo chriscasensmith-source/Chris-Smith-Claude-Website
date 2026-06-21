@@ -16,7 +16,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteName = "Chris Smith | Real Work Learning";
+const siteName = "Real Work Learning";
 const siteDescription =
   "Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.";
 

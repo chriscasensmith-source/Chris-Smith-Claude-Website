@@ -12,10 +12,10 @@ export default function Footer() {
               href="/"
               className="font-serif text-xl text-warm-white hover:text-accent-orange transition-colors duration-200"
             >
-              Chris Smith
-            </Link>
-            <span className="font-sans text-sm text-warm-white/60 font-medium tracking-wide uppercase">
               Real Work Learning
+            </Link>
+            <span className="font-sans text-sm text-accent-orange/90 font-medium tracking-wide italic">
+              Less lecture. More practice. Better results.
             </span>
             <p className="font-sans text-sm text-warm-white/60 leading-relaxed">
               Practical workshops, AI training, leadership development, and
@@ -39,8 +39,8 @@ export default function Footer() {
         </div>
         <div className="border-t border-warm-white/10 mt-10 pt-6">
           <p className="font-sans text-xs text-warm-white/40">
-            &copy; {new Date().getFullYear()} Chris Smith | Real Work Learning.
-            All rights reserved.
+            &copy; {new Date().getFullYear()} Real Work Learning. All rights
+            reserved.
           </p>
         </div>
       </div>
