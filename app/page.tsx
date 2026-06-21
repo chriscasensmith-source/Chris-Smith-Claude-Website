@@ -322,11 +322,11 @@ export default function HomePage() {
             <div className="flex flex-col gap-6">
               <SectionHeader label="About" heading="An operator who teaches and builds." />
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
-                I spent ten years managing training operations at Hillstone
-                Restaurant Group, then moved into broader operations, workforce
-                development, and technical training across complex environments.
-                That foundation shapes how I work: structure plus humanity,
-                clear standards plus room to grow.
+                My background runs from hospitality training at Hillstone to
+                operations training on an FDA-regulated manufacturing floor at
+                Mary Kay, across hundreds of employees and six departments. That
+                foundation shapes how I work: structure plus humanity, clear
+                standards plus room to grow.
               </p>
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
                 Now I pair that operational discipline with practical AI,
