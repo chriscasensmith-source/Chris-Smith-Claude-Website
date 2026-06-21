@@ -60,20 +60,19 @@ const processSteps = [
 
 const stats = [
   {
-    value: "10+ yrs",
-    label: "Operations & training leadership",
-    description: "From Hillstone Restaurant Group to complex manufacturing environments.",
-  },
-  {
-    value: "20+",
-    label: "Bespoke AI tools built",
-    description:
-      "Including the Training Command Center, Skills Gap Analysis, SME Knowledge Capture, MRP Assistant, and a Difficult Conversation voice agent.",
+    value: "10+ years",
+    label: "Leading training & development",
+    description: "In demanding restaurant and manufacturing operations.",
   },
   {
     value: "Hundreds",
     label: "Of employees across 6 departments",
-    description: "Tracked through live training journeys in the Training Command Center.",
+    description: "Onboarded, developed, and tracked under my training programs.",
+  },
+  {
+    value: "20+",
+    label: "AI tools built",
+    description: "Created to fix the problems I saw break on the floor.",
   },
 ];
 
@@ -155,8 +154,8 @@ export default function HomePage() {
           <Reveal className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
               <Image
-                src="/images/website2.png"
-                alt="Chris Smith facilitating a hands-on training workshop"
+                src="/images/website1.png"
+                alt="A team working through a hands-on training activity on the floor"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
@@ -277,16 +276,21 @@ export default function HomePage() {
       {/* ─── Impact ───────────────────────────────────────────────── */}
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
         <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-5 max-w-[860px]">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
-              Impact
+              The experience behind the build
             </span>
             <h2 className="font-serif text-[28px] md:text-[44px] text-dark-text leading-tight">
-              Operations experience behind every build.
+              I ran training at scale before I built tools for it.
             </h2>
-            <p className="font-sans text-base md:text-lg text-dark-text/70 leading-relaxed max-w-[760px]">
-              A decade running training in demanding operations shapes every
-              tool and workshop I deliver.
+            <p className="font-sans text-base md:text-lg text-dark-text/70 leading-relaxed">
+              For over a decade I led training and development for hundreds of
+              employees across six departments, from frontline onboarding to
+              leadership coaching and technical skills. I know exactly where
+              training breaks down in real operations: knowledge trapped in a
+              few people&rsquo;s heads, progress buried in spreadsheets, trainers
+              stretched too thin. The AI tools I build come straight from that
+              experience, made to fix the problems I lived with every day.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">

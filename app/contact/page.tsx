@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -22,9 +23,9 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col gap-6 max-w-[700px]">
+      <section className="bg-primary-bg text-warm-white py-24 md:py-28 px-4 md:px-8">
+        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col gap-6">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               Contact
             </span>
@@ -41,6 +42,16 @@ export default function ContactPage() {
               You do not need to have the whole thing figured out. A rough idea
               is enough to start.
             </p>
+          </div>
+          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+            <Image
+              src="/images/website7.png"
+              alt="A full room during one of Chris Smith's training sessions"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>

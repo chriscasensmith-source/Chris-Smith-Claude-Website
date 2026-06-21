@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import Button from "@/components/Button";
+import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
   title: "Services | Real Work Learning",
@@ -237,22 +237,10 @@ export default function ServicesPage() {
         </section>
       ))}
 
-      {/* CTA */}
-      <section className="bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col gap-6 max-w-[600px]">
-          <h2 className="font-serif text-[24px] md:text-[40px] leading-snug text-warm-white">
-            Ready to build something useful?
-          </h2>
-          <p className="font-sans text-base md:text-lg leading-relaxed text-warm-white/70">
-            Let&rsquo;s talk about what your team needs.
-          </p>
-          <div className="pt-2">
-            <Button href="/contact">Start a Conversation</Button>
-          </div>
-          </div>
-        </div>
-      </section>
+      <CtaSection
+        heading="Ready to build something useful?"
+        body="Let's talk about what your team needs."
+      />
     </>
   );
 }

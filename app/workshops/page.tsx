@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Card from "@/components/Card";
-import Button from "@/components/Button";
+import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
   title: "Workshops | Real Work Learning",
@@ -149,10 +149,10 @@ export default function WorkshopsPage() {
     <>
       <PageHero
         label="Workshops"
-        heading="Workshops designed for learning that sticks. 90 minutes to 2 hours of active practice."
+        heading="Workshops designed for learning that sticks."
         subtext="Most workshops are 90 minutes to 2 hours in length. This timeframe allows for real learning: introduction, demonstration, guided practice, group discussion, and practical takeaways. Each session can be customized for employees, leaders, trainers, frontline teams, or mixed groups."
-        imageSrc="/images/website6.png"
-        imageAlt="Participants working together during a hands-on workshop activity"
+        imageSrc="/images/facilitation-activity.jpg"
+        imageAlt="Operators collaborating on a hands-on team-building activity"
       />
 
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
@@ -207,23 +207,10 @@ export default function WorkshopsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col gap-6 max-w-[600px]">
-            <h2 className="font-serif text-[24px] md:text-[40px] leading-snug">
-              Looking for a specific topic or custom session?
-            </h2>
-            <p className="font-sans text-base md:text-lg leading-relaxed text-warm-white/70">
-              All workshops can be adapted for your audience, your goals, and
-              your workplace. Let&rsquo;s talk about what you need.
-            </p>
-            <div className="pt-2">
-              <Button href="/contact">Start a Conversation</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CtaSection
+        heading="Looking for a specific topic or custom session?"
+        body="All workshops can be adapted for your audience, your goals, and your workplace. Let's talk about what you need."
+      />
     </>
   );
 }

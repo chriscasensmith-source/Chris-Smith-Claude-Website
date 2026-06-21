@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import Button from "@/components/Button";
+import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
   title: "About | Real Work Learning",
@@ -23,8 +23,8 @@ export default function AboutPage() {
       <PageHero
         label="About"
         heading="I build training for real people doing real work."
-        imageSrc="/images/website7.png"
-        imageAlt="Chris Smith presenting to a full room"
+        imageSrc="/images/Panel1.png"
+        imageAlt="Chris Smith speaking on stage at a panel"
       />
 
       {/* Main copy */}
@@ -165,24 +165,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col gap-6 max-w-[600px]">
-            <h2 className="font-serif text-[24px] md:text-[40px] leading-snug">
-              Want to work together?
-            </h2>
-            <p className="font-sans text-base md:text-lg leading-relaxed text-warm-white/70">
-              Whether you have a specific project in mind or a general idea,
-              I&rsquo;d be glad to talk through what could be useful for your
-              team.
-            </p>
-            <div className="pt-2">
-              <Button href="/contact">Start a Conversation</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CtaSection
+        heading="Want to work together?"
+        body="Whether you have a specific project in mind or a general idea, I'd be glad to talk through what could be useful for your team."
+      />
     </>
   );
 }

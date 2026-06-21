@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
-import Button from "@/components/Button";
+import CtaSection from "@/components/CtaSection";
 
 export const metadata: Metadata = {
   title: "AI Training | Real Work Learning",
@@ -62,6 +62,7 @@ export default function AITrainingPage() {
           <SectionHeader
             label="Workshop sessions"
             heading="Four practical AI sessions, each built around real work."
+            align="center"
           />
           <div className="grid md:grid-cols-2 gap-6">
             {sessions.map((s) => (
@@ -148,24 +149,10 @@ export default function AITrainingPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col gap-6 max-w-[600px]">
-            <h2 className="font-serif text-[24px] md:text-[40px] leading-snug">
-              Ready to help your team use AI with more confidence and better
-              judgment?
-            </h2>
-            <p className="font-sans text-base md:text-lg leading-relaxed text-warm-white/70">
-              Let&rsquo;s build a session around your people and your
-              workplace tools.
-            </p>
-            <div className="pt-2">
-              <Button href="/contact">Start a Conversation</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CtaSection
+        heading="Ready to help your team use AI with more confidence and better judgment?"
+        body="Let's build a session around your people and your workplace tools."
+      />
     </>
   );
 }
