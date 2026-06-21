@@ -32,7 +32,7 @@ export const solutions: Solution[] = [
     category: "Training & Onboarding",
     tagline: "A live training-journey dashboard for supervisors and training admins.",
     description:
-      "Tracks every trainee across 90-day and 6-week journeys in six departments — current step, next action, owner, due date, blockers, check-ins, and final certification. One view replaces spreadsheet chaos.",
+      "Tracks every trainee across 90-day and 6-week journeys in six departments: current step, next action, owner, due date, blockers, check-ins, and final certification. One view replaces spreadsheet chaos.",
     image: "/images/tcc-dashboard.png",
     imageAlt: "Training Command Center dashboard showing active trainee journeys, blockers, and overdue steps",
     builtWith: "Built with Claude Code & Codex",
@@ -54,7 +54,7 @@ export const solutions: Solution[] = [
     category: "Knowledge",
     tagline: "Turn expert know-how into reusable training and agent-ready content.",
     description:
-      "“Tribe” captures tribal knowledge from subject matter experts, then parses each transcript into a Training Guide, How-To, and Agent Knowledge — organized by department and exportable as a reusable knowledge pack.",
+      "“Tribe” captures tribal knowledge from subject matter experts, then parses each transcript into a Training Guide, How-To, and Agent Knowledge, organized by department and exportable as a reusable knowledge pack.",
     image: "/images/image-1781985879149.png",
     imageAlt: "Tribe knowledge capture library of saved expert knowledge ready to reuse as training",
     builtWith: "Built with Claude Code & Codex",
@@ -65,7 +65,7 @@ export const solutions: Solution[] = [
     category: "Manufacturing & Planning",
     tagline: "Surface manufacturing and planning information faster.",
     description:
-      "An assistant that helps teams pull the manufacturing and planning answers they need without digging through systems and spreadsheets — so decisions happen at the speed of the floor.",
+      "An assistant that helps teams pull the manufacturing and planning answers they need without digging through systems and spreadsheets, so decisions happen at the speed of the floor.",
   },
   {
     slug: "difficult-conversation-voice-agent",
@@ -73,7 +73,7 @@ export const solutions: Solution[] = [
     category: "Leadership",
     tagline: "Practice hard conversations out loud, before they happen for real.",
     description:
-      "A leadership-support voice agent for rehearsing difficult conversations, evaluations, mid-years, and coaching discussions — a safe place to practice tone, structure, and follow-through.",
+      "A leadership-support voice agent for rehearsing difficult conversations, evaluations, mid-years, and coaching discussions. A safe place to practice tone, structure, and follow-through.",
   },
 ];
 
@@ -89,7 +89,7 @@ export const caseStudies: CaseStudy[] = [
     build:
       "A command center for the whole training journey: a dashboard of active journeys, blockers, and overdue steps; per-trainee detail with timeline, onboarding checklist, and certification status; trainer-capacity views; and admin controls for pausing, reassigning, and noting journeys.",
     result:
-      "One live view of every active 90-day and 6-week journey — current step, next action, owner, and due date at a glance — so action items surface early instead of slipping through the cracks.",
+      "One live view of every active 90-day and 6-week journey, with current step, next action, owner, and due date at a glance, so action items surface early instead of slipping through the cracks.",
     builtWith: "Built with Claude Code & Codex",
     images: [
       { src: "/images/tcc-dashboard.png", alt: "Training Journey dashboard with active trainees, progress, and action filters" },
@@ -105,11 +105,11 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A written + practical assessment that produces a technician readiness profile and a targeted training plan.",
     problem:
-      "Maintenance teams needed an honest, consistent way to identify technician skill gaps — and to plan training around them — without turning the assessment into a pass/fail grade.",
+      "Maintenance teams needed an honest, consistent way to identify technician skill gaps and plan training around them, without turning the assessment into a pass/fail grade.",
     build:
       "A three-part tool: a 45-question scenario-based written assessment that tests troubleshooting judgment; tablet-administered practical stations scored on a four-level rubric with hard-gate critical-fail safety items; and a weighted readiness profile (written 35% / practical 50% / observation 15%) with a safety gate that blocks sign-off while a critical gap is open.",
     result:
-      "Category scores and prioritized training needs turn results into a coaching plan rather than a grade — with safety gaps surfaced before a technician is cleared to work independently.",
+      "Category scores and prioritized training needs turn results into a coaching plan rather than a grade, with safety gaps surfaced before a technician is cleared to work independently.",
     builtWith: "Built with Claude Code & Codex",
     images: [
       { src: "/images/skillsgap-overview.png", alt: "Skills Gap Assessment overview with the three-part assessment flow" },
@@ -125,9 +125,9 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "A workflow that captures expert knowledge and parses it into reusable training and troubleshooting content.",
     problem:
-      "Critical know-how lived in the heads of a few experienced people. When they were busy — or gone — that knowledge was hard to teach and easy to lose.",
+      "Critical know-how lived in the heads of a few experienced people. When they were busy, or gone, that knowledge was hard to teach and easy to lose.",
     build:
-      "Tribe captures a transcript from a subject matter expert and parses it into structured outputs — a Training Guide, a How-To, and Agent Knowledge — tagged by department and knowledge type (process, troubleshooting, system, tribal) and stored in a searchable library.",
+      "Tribe captures a transcript from a subject matter expert and parses it into structured outputs: a Training Guide, a How-To, and Agent Knowledge, tagged by department and knowledge type (process, troubleshooting, system, tribal) and stored in a searchable library.",
     result:
       "Tribal knowledge becomes reusable training material and agent-ready content that any team can pull from, and an exportable knowledge pack that travels across the plant.",
     builtWith: "Built with Claude Code & Codex",

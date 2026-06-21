@@ -151,6 +151,8 @@ export default function WorkshopsPage() {
         label="Workshops"
         heading="Workshops designed for learning that sticks. 90 minutes to 2 hours of active practice."
         subtext="Most workshops are 90 minutes to 2 hours in length. This timeframe allows for real learning: introduction, demonstration, guided practice, group discussion, and practical takeaways. Each session can be customized for employees, leaders, trainers, frontline teams, or mixed groups."
+        imageSrc="/images/website6.png"
+        imageAlt="Participants working together during a hands-on workshop activity"
       />
 
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">

@@ -57,7 +57,7 @@ export default function ContactForm() {
         className="flex flex-col gap-3 bg-soft-white border border-sand rounded-xl p-8"
       >
         <h2 className="font-serif text-[24px] md:text-[32px] text-dark-text leading-snug">
-          Thanks — your message is on its way.
+          Thanks! Your message is on its way.
         </h2>
         <p className="font-sans text-base text-dark-text/70 leading-relaxed">
           I&rsquo;ll get back to you shortly. In the meantime, feel free to

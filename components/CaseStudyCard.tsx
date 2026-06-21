@@ -21,20 +21,29 @@ export default function CaseStudyCard({ study, reverse }: CaseStudyCardProps) {
   return (
     <article className="bg-warm-white rounded-xl border border-sand/40 shadow-sm overflow-hidden">
       <div
-        className={`grid lg:grid-cols-2 ${
+        className={`grid lg:grid-cols-2 lg:items-center ${
           reverse ? "lg:[&>*:first-child]:order-2" : ""
         }`}
       >
-        {/* Visual */}
-        <div className="relative min-h-[260px] lg:min-h-full bg-soft-white border-b lg:border-b-0 border-sand/40">
+        {/* Visual: full screenshot in an app-window frame */}
+        <div className="p-6 md:p-8 bg-soft-white border-b lg:border-b-0 border-sand/40">
           {lead && (
-            <Image
-              src={lead.src}
-              alt={lead.alt}
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-top"
-            />
+            <div className="rounded-lg border border-sand/50 shadow-md overflow-hidden bg-white">
+              <div className="flex items-center gap-1.5 h-7 px-3 bg-soft-white border-b border-sand/40">
+                <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
+                <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
+                <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
+              </div>
+              <div className="relative aspect-[16/9] bg-white">
+                <Image
+                  src={lead.src}
+                  alt={lead.alt}
+                  fill
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  className="object-contain object-top"
+                />
+              </div>
+            </div>
           )}
         </div>
 
