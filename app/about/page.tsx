@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaSection from "@/components/CtaSection";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "About | Real Work Learning",
@@ -27,10 +29,10 @@ export default function AboutPage() {
         imageAlt="Chris Smith speaking on stage at a panel"
       />
 
-      {/* Main copy */}
+      {/* Main copy — prose with a sticky lessons sidebar */}
       <section className="bg-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="max-w-[700px] flex flex-col gap-6 font-sans text-base md:text-lg leading-relaxed text-dark-text/80">
+        <Reveal className="max-w-[1200px] mx-auto grid lg:grid-cols-[1.6fr_1fr] gap-12 lg:gap-16 items-start">
+          <div className="flex flex-col gap-6 font-sans text-base md:text-lg leading-relaxed text-dark-text/80">
             <p>
               I help organizations build workshops, leadership development,
               onboarding systems, trainer capability, and practical AI skills
@@ -53,28 +55,6 @@ export default function AboutPage() {
               never see: how to build training systems that survive real
               conditions.
             </p>
-            <div className="bg-soft-white rounded-xl p-6 my-4">
-              <p className="font-medium text-dark-text mb-4">
-                What I learned at Hillstone stayed with me:
-              </p>
-              <ul className="flex flex-col gap-3">
-                {[
-                  "Training needs to be documented so it is teachable, not left to individual interpretation.",
-                  "Every procedure has a purpose.",
-                  "Standards matter because they protect people and quality.",
-                  "You train people until they can do the work under pressure, not just in ideal conditions.",
-                  "Accountability and respect go together.",
-                  "When you invest in developing people, they remember it.",
-                ].map((item) => (
-                  <li key={item} className="flex gap-3 items-start text-dark-text/80">
-                    <span className="text-accent-orange shrink-0 font-medium mt-0.5">
-                      &ndash;
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
             <p>
               That foundation shaped everything I do now. Whether I am building
               a workshop for leadership development, designing an onboarding
@@ -108,13 +88,39 @@ export default function AboutPage() {
               Less lecture. More practice. Better results.
             </p>
           </div>
-        </div>
+
+          <aside className="lg:sticky lg:top-24 self-start bg-soft-white rounded-xl border border-sand/40 shadow-sm p-6 md:p-8">
+            <p className="font-serif text-lg text-dark-text mb-4">
+              What I learned at Hillstone stayed with me
+            </p>
+            <ul className="flex flex-col gap-3">
+              {[
+                "Training needs to be documented so it is teachable, not left to individual interpretation.",
+                "Every procedure has a purpose.",
+                "Standards matter because they protect people and quality.",
+                "You train people until they can do the work under pressure, not just in ideal conditions.",
+                "Accountability and respect go together.",
+                "When you invest in developing people, they remember it.",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex gap-3 items-start text-sm md:text-base text-dark-text/80 leading-relaxed"
+                >
+                  <span className="text-accent-orange shrink-0 font-medium mt-0.5">
+                    &ndash;
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </aside>
+        </Reveal>
       </section>
 
-      {/* What I Believe */}
+      {/* What I Believe — grid of numbered cards */}
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto flex flex-col gap-10">
-          <div className="flex flex-col gap-3 max-w-[600px]">
+        <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-10">
+          <div className="flex flex-col gap-3 max-w-[640px]">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               What I believe
             </span>
@@ -122,28 +128,37 @@ export default function AboutPage() {
               Six things I think good training should always do.
             </h2>
           </div>
-          <ul className="flex flex-col gap-4 max-w-[700px]">
-            {beliefs.map((b) => (
-              <li
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {beliefs.map((b, i) => (
+              <div
                 key={b}
-                className="flex gap-4 items-start border-b border-dark-text/10 pb-4 last:border-0 last:pb-0"
+                className="flex flex-col gap-3 bg-warm-white rounded-xl border border-sand/40 shadow-sm p-6"
               >
-                <span className="text-accent-orange font-medium font-sans shrink-0 mt-0.5">
-                  &ndash;
+                <span className="font-serif text-accent-orange text-2xl md:text-3xl leading-none">
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/80">
+                <p className="font-sans text-base leading-relaxed text-dark-text/80">
                   {b}
                 </p>
-              </li>
+              </div>
             ))}
-          </ul>
-        </div>
+          </div>
+        </Reveal>
       </section>
 
-      {/* My Style */}
+      {/* My Style — image + copy */}
       <section className="bg-warm-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="max-w-[700px] flex flex-col gap-6">
+        <Reveal className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-2 lg:order-1">
+            <Image
+              src="/images/website2.png"
+              alt="Chris Smith facilitating a classroom workshop"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="flex flex-col gap-6 order-1 lg:order-2">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               My style
             </span>
@@ -162,7 +177,7 @@ export default function AboutPage() {
               the content to their daily work.
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <CtaSection
