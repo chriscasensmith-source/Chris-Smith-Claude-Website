@@ -34,38 +34,39 @@ export default function AboutPage() {
         <Reveal className="max-w-[1200px] mx-auto grid lg:grid-cols-[1.6fr_1fr] gap-12 lg:gap-16 items-start">
           <div className="flex flex-col gap-6 font-sans text-base md:text-lg leading-relaxed text-dark-text/80">
             <p>
-              I help operations teams learn the work, lead better, and adopt AI
-              with judgment, and I build the practical tools that make it stick.
+              I build the training and the tools that keep complex operations
+              running, and I help the people inside them learn faster, lead
+              better, and use AI with judgment.
             </p>
             <p>
-              My career has taken an unusual path, and that path shaped how I
-              work.
+              My path into this work is unusual, and that is the point. I have
+              built training in two of the most demanding environments there
+              are, and learned what actually holds up under pressure.
             </p>
             <p>
-              I spent ten years managing training operations and development at
-              Hillstone Restaurant Group, one of the most respected and
-              deliberately scaled upscale restaurant organizations in the
-              country. Hillstone is known for structured training guides,
-              developmental programs for both front of house and back of house
-              operations, and a rigorous culture of training discipline.
+              It started at Hillstone Restaurant Group, where I spent a decade
+              leading training operations for one of the most deliberately
+              scaled, training-disciplined hospitality companies in the country.
             </p>
             <p>
-              That experience taught me something most training professionals
-              never see: how to build training systems that survive real
-              conditions.
+              That is where I learned what most training professionals never get
+              to: how to build training that survives real conditions, not just
+              ideal ones.
             </p>
             <p>
-              From there I moved onto the manufacturing floor. As a Senior
-              Training Specialist at Mary Kay, I lead operations training for a
-              250-person, FDA-regulated plant spanning six departments and three
-              shifts: audit-ready safety and compliance training, role-based
-              onboarding, certified-trainer programs, and the documentation that
-              keeps it all defensible.
+              From there I took that discipline onto the manufacturing floor. As
+              Senior Training Specialist at Mary Kay, I own operations training
+              for a 250-person, FDA-regulated plant across six departments and
+              three shifts. I have architected 55+ role-based onboarding and
+              certified-trainer paths, run two dozen annual safety and compliance
+              sessions (OSHA, LOTO, GMP, ISO 22716) at 96% on-time completion,
+              and administer the audit-ready systems that keep the floor
+              inspection-ready.
             </p>
             <p>
-              That floor is where my AI work comes from. Facing the real gaps,
-              scattered spreadsheets, knowledge trapped in a few people&rsquo;s
-              heads, and trainers stretched thin, I started building tools to
+              That floor is where my AI work was born. Facing the real gaps,
+              scattered spreadsheets, knowledge locked in a few people&rsquo;s
+              heads, and trainers stretched thin, I designed and shipped tools to
               close them: a Training Command Center, a maintenance skills-gap
               analysis, an SME knowledge-capture workflow, and more.
             </p>
