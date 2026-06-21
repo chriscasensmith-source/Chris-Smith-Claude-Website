@@ -1,14 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import type { Solution } from "@/lib/projects";
+import VoiceSessionGraphic from "@/components/VoiceSessionGraphic";
 
 interface SolutionCardProps {
   solution: Solution;
 }
 
 export default function SolutionCard({ solution }: SolutionCardProps) {
-  const { name, category, tagline, description, image, imageAlt, builtWith } =
-    solution;
+  const {
+    name,
+    category,
+    tagline,
+    description,
+    image,
+    imageAlt,
+    graphic,
+    builtWith,
+  } = solution;
 
   return (
     <div className="group flex flex-col h-full bg-warm-white rounded-xl border border-sand/40 shadow-sm overflow-hidden transition-shadow duration-200 hover:shadow-md">
@@ -22,6 +31,8 @@ export default function SolutionCard({ solution }: SolutionCardProps) {
             className="object-cover object-top"
           />
         </div>
+      ) : graphic === "voice" ? (
+        <VoiceSessionGraphic />
       ) : (
         <div className="relative w-full aspect-[16/10] border-b border-sand/40 bg-primary-bg flex items-center justify-center">
           <span className="font-serif text-warm-white/90 text-2xl text-center px-6 leading-snug">

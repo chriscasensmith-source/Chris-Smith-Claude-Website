@@ -10,6 +10,8 @@ export interface Solution {
   description: string;
   image?: string;
   imageAlt?: string;
+  /** Designed graphic to show when there's no screenshot. */
+  graphic?: "voice";
   builtWith?: string;
 }
 
@@ -77,6 +79,7 @@ export const solutions: Solution[] = [
     tagline: "Practice hard conversations out loud, before they happen for real.",
     description:
       "A leadership-support voice agent for rehearsing difficult conversations, evaluations, mid-years, and coaching discussions. A safe place to practice tone, structure, and follow-through.",
+    graphic: "voice",
   },
 ];
 
