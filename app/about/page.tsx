@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About | Real Work Learning",
   description:
-    "Chris Smith brings 10 years of training operations experience at Hillstone Restaurant Group plus expertise in leadership development, AI training, and workforce development.",
+    "Chris Smith builds training and practical AI tools for operations teams, from hospitality training at Hillstone to operations training in FDA-regulated manufacturing at Mary Kay.",
 };
 
 const beliefs = [
@@ -34,9 +34,8 @@ export default function AboutPage() {
         <Reveal className="max-w-[1200px] mx-auto grid lg:grid-cols-[1.6fr_1fr] gap-12 lg:gap-16 items-start">
           <div className="flex flex-col gap-6 font-sans text-base md:text-lg leading-relaxed text-dark-text/80">
             <p>
-              I help organizations build workshops, leadership development,
-              onboarding systems, trainer capability, and practical AI skills
-              that people can actually use.
+              I help operations teams learn the work, lead better, and adopt AI
+              with judgment, and I build the practical tools that make it stick.
             </p>
             <p>
               My career has taken an unusual path, and that path shaped how I
@@ -56,20 +55,24 @@ export default function AboutPage() {
               conditions.
             </p>
             <p>
-              That foundation shaped everything I do now. Whether I am building
-              a workshop for leadership development, designing an onboarding
-              system for operations, or helping a team adopt AI more
-              thoughtfully, I bring that discipline. Structure plus humanity.
-              Clear expectations plus room to grow. Documentation plus
-              conversation.
+              From there I moved onto the manufacturing floor. As a Senior
+              Training Specialist at Mary Kay, I lead operations training for a
+              250-person, FDA-regulated plant spanning six departments and three
+              shifts: audit-ready safety and compliance training, role-based
+              onboarding, certified-trainer programs, and the documentation that
+              keeps it all defensible.
             </p>
             <p>
-              From Hillstone, my career moved into broader operations, workforce
-              development, leadership development, technical training, and
-              organizational learning across complex working environments. I have
-              built onboarding systems, trainer programs, frontline development
-              pathways, leadership workshops, technical learning programs, and
-              practical AI training for employees and leaders.
+              That floor is where my AI work comes from. Facing the real gaps,
+              scattered spreadsheets, knowledge trapped in a few people&rsquo;s
+              heads, and trainers stretched thin, I started building tools to
+              close them: a Training Command Center, a maintenance skills-gap
+              analysis, an SME knowledge-capture workflow, and more.
+            </p>
+            <p>
+              Across hospitality and manufacturing, the discipline is the same:
+              structure plus humanity, clear expectations plus room to grow,
+              documentation plus conversation.
             </p>
             <p>What connects all of it is this:</p>
             <p className="font-serif text-xl md:text-2xl text-dark-text italic">
