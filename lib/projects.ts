@@ -89,9 +89,9 @@ export const caseStudies: CaseStudy[] = [
     name: "Training Command Center",
     category: "Training & Onboarding",
     summary:
-      "A live training-journey dashboard that replaced spreadsheet tracking for trainees across six departments.",
+      "A live training-journey dashboard that replaced spreadsheet tracking across six departments and three shifts.",
     problem:
-      "Training progress lived in scattered spreadsheets. Supervisors and training admins had no single, current view of who was on track, who was blocked, what was overdue, or which trainees still needed a trainer.",
+      "Training progress lived in scattered spreadsheets. Across six departments and three shifts, supervisors and training admins had no single, current view of who was on track, who was blocked, what was overdue, or which trainees still needed a trainer.",
     build:
       "A command center for the whole training journey: a dashboard of active journeys, blockers, and overdue steps; per-trainee detail with timeline, onboarding checklist, and certification status; trainer-capacity views; and admin controls for pausing, reassigning, and noting journeys.",
     result:

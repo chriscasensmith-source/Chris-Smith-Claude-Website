@@ -61,18 +61,18 @@ const processSteps = [
 const stats = [
   {
     value: "10+ years",
-    label: "Leading training & development",
-    description: "In demanding restaurant and manufacturing operations.",
+    label: "Leading training in demanding operations",
+    description: "From upscale hospitality to an FDA-regulated plant floor.",
   },
   {
     value: "Hundreds",
-    label: "Of employees across 6 departments",
-    description: "Onboarded, developed, and tracked under my training programs.",
+    label: "Of employees trained and tracked",
+    description: "Across six departments and three shifts in regulated manufacturing.",
   },
   {
     value: "20+",
-    label: "AI tools built",
-    description: "Created to fix the problems I saw break on the floor.",
+    label: "AI tools shipped",
+    description: "Built to fix the gaps I lived with, from onboarding to skills analysis.",
   },
 ];
 
@@ -284,13 +284,13 @@ export default function HomePage() {
               I ran training at scale before I built tools for it.
             </h2>
             <p className="font-sans text-base md:text-lg text-dark-text/70 leading-relaxed">
-              For over a decade I led training and development for hundreds of
-              employees across six departments, from frontline onboarding to
-              leadership coaching and technical skills. I know exactly where
+              For over a decade I have led training across upscale hospitality
+              and an FDA-regulated manufacturing floor, for hundreds of employees
+              spanning six departments and three shifts. I know exactly where
               training breaks down in real operations: knowledge trapped in a
               few people&rsquo;s heads, progress buried in spreadsheets, trainers
               stretched too thin. The AI tools I build come straight from that
-              experience, made to fix the problems I lived with every day.
+              experience, designed to fix the problems I lived with every day.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
