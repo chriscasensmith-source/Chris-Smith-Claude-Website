@@ -63,9 +63,12 @@ export const solutions: Solution[] = [
     slug: "mrp-assistant",
     name: "MRP Assistant",
     category: "Manufacturing & Planning",
-    tagline: "Surface manufacturing and planning information faster.",
+    tagline: "Surface coverage, shortage risk, and planning signals faster.",
     description:
-      "An assistant that helps teams pull the manufacturing and planning answers they need without digging through systems and spreadsheets, so decisions happen at the speed of the floor.",
+      "A coverage dashboard that tracks SKUs across the planning horizon and flags window alerts and active shortages, so teams see what needs action without digging through systems and spreadsheets.",
+    image: "/images/MRP.png",
+    imageAlt:
+      "MRP Assistant coverage dashboard showing SKU coverage, window alerts, and active shortages",
   },
   {
     slug: "difficult-conversation-voice-agent",
