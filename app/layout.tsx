@@ -18,7 +18,7 @@ const inter = Inter({
 
 const siteName = "Real Work Learning";
 const siteDescription =
-  "Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.";
+  "Real Work Learning by Chris Smith, a Dallas-based training and operations professional. Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.";
 
 export const metadata: Metadata = {
   // Override with NEXT_PUBLIC_SITE_URL per environment; defaults to the

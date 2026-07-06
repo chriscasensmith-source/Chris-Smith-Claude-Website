@@ -21,6 +21,9 @@ export default function Footer() {
               Practical workshops, AI training, leadership development, and
               training systems for real teams doing real work.
             </p>
+            <p className="font-sans text-sm text-warm-white/50">
+              Chris Smith &middot; Dallas, Texas
+            </p>
           </div>
           <nav aria-label="Footer navigation">
             <ul className="flex flex-col gap-3">
