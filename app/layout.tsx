@@ -21,10 +21,10 @@ const siteDescription =
   "Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.";
 
 export const metadata: Metadata = {
-  // Set NEXT_PUBLIC_SITE_URL in your deployment for correct absolute URLs in
-  // Open Graph tags and the sitemap. Falls back to localhost for local dev.
+  // Override with NEXT_PUBLIC_SITE_URL per environment; defaults to the
+  // production domain so Open Graph tags and the sitemap use absolute URLs.
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://realworklearning.com",
   ),
   title: siteName,
   description: siteDescription,
