@@ -42,6 +42,10 @@ export default function ContactPage() {
               You do not need to have the whole thing figured out. A rough idea
               is enough to start.
             </p>
+            <p className="font-sans text-sm text-warm-white/50">
+              Chris Smith &middot; based in Dallas, Texas &middot; available
+              on-site and remote.
+            </p>
           </div>
           <div className="relative w-full aspect-[16/10] lg:aspect-[4/3] rounded-xl overflow-hidden shadow-md order-1 lg:order-2">
             <Image

@@ -34,9 +34,10 @@ export default function AboutPage() {
         <Reveal className="max-w-[1200px] mx-auto grid lg:grid-cols-[1.6fr_1fr] gap-12 lg:gap-16 items-start">
           <div className="flex flex-col gap-6 font-sans text-base md:text-lg leading-relaxed text-dark-text/80">
             <p>
-              I build the training and the tools that keep complex operations
-              running, and I help the people inside them learn faster, lead
-              better, and use AI with judgment.
+              I&rsquo;m Chris Smith, a training and operations professional based
+              in Dallas, Texas. I build the training and the tools that keep
+              complex operations running, and I help the people inside them
+              learn faster, lead better, and use AI with judgment.
             </p>
             <p>
               My path into this work is unusual, and that is the point. I have

@@ -11,9 +11,9 @@ import Reveal from "@/components/Reveal";
 import { solutions, caseStudies } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Real Work Learning | Training, Facilitation & AI Enablement",
+  title: "Real Work Learning | Chris Smith",
   description:
-    "Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.",
+    "Chris Smith is a Dallas-based training and operations professional. Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.",
 };
 
 const pillars = [
@@ -97,6 +97,9 @@ export default function HomePage() {
               </p>
               <p className="font-serif text-xl text-accent-orange italic">
                 Less lecture. More practice. Better results.
+              </p>
+              <p className="font-sans text-sm text-warm-white/50">
+                Chris Smith &middot; Dallas, Texas
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button href="/contact">Start a Conversation</Button>
@@ -322,11 +325,12 @@ export default function HomePage() {
             <div className="flex flex-col gap-6">
               <SectionHeader label="About" heading="An operator who teaches and builds." />
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
-                My background runs from hospitality training at Hillstone to
-                operations training on an FDA-regulated manufacturing floor at
-                Mary Kay, across hundreds of employees and six departments. That
-                foundation shapes how I work: structure plus humanity, clear
-                standards plus room to grow.
+                I&rsquo;m Chris Smith, a Dallas-based training and operations
+                professional. My background runs from hospitality training at
+                Hillstone to operations training on an FDA-regulated
+                manufacturing floor at Mary Kay, across hundreds of employees and
+                six departments. That foundation shapes how I work: structure
+                plus humanity, clear standards plus room to grow.
               </p>
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
                 Now I pair that operational discipline with practical AI,
