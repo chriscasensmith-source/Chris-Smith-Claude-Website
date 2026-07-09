@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { navItems } from "@/lib/constants";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -8,12 +9,10 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           <div className="flex flex-col gap-3 max-w-sm">
-            <Link
-              href="/"
-              className="font-serif text-xl text-warm-white hover:text-accent-orange transition-colors duration-200"
-            >
-              Real Work Learning
-            </Link>
+            <Logo
+              markClassName="h-8 w-8 text-warm-white"
+              textClassName="font-serif text-xl font-semibold text-warm-white"
+            />
             <span className="font-sans text-sm text-accent-orange/90 font-medium tracking-wide italic">
               Less lecture. More practice. Better results.
             </span>

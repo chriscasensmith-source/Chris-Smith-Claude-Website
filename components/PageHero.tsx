@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ImageFrame from "@/components/ImageFrame";
 
 interface PageHeroProps {
   label?: string;
@@ -43,7 +44,10 @@ export default function PageHero({
         {imageSrc ? (
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">{textContent}</div>
-            <div className="relative w-full aspect-[16/10] md:aspect-[4/3] rounded-lg overflow-hidden order-1 md:order-2">
+            <ImageFrame
+              aspect="aspect-[16/10] md:aspect-[4/3]"
+              className="order-1 md:order-2"
+            >
               <Image
                 src={imageSrc}
                 alt={imageAlt}
@@ -52,7 +56,7 @@ export default function PageHero({
                 className="object-cover"
                 priority
               />
-            </div>
+            </ImageFrame>
           </div>
         ) : (
           <div className="max-w-[700px]">{textContent}</div>

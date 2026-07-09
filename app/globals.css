@@ -3,14 +3,18 @@
 /* ─── Design Tokens ──────────────────────────────────────────────────────── */
 
 @theme {
-  /* Colors */
-  --color-primary-bg: #061B2A;
+  /* Colors — Real Work Learning brand palette (navy · beige · tan · orange) */
+  --color-primary-bg: #061B2A; /* deepest navy, darkest sections */
+  --color-navy: #0D1B2A;       /* brand navy, cards/overlays/dividers */
+  --color-navy-soft: #14293B;  /* lifted navy for layering on dark */
   --color-near-black: #080A0C;
   --color-dark-text: #111111;
   --color-warm-white: #F5F1EA;
   --color-soft-white: #F8F6F1;
-  --color-accent-orange: #FF5A1F;
+  --color-accent-orange: #F36F21; /* brand orange */
   --color-sand: #E9D7C0;
+  --color-beige: #EAD7C1;      /* soft section bands */
+  --color-tan: #C69C6D;        /* warmer accent, borders, tiles */
   --color-soft-pink: #F4B6D2;
 
   /* Max widths */

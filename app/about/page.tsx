@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaSection from "@/components/CtaSection";
 import Reveal from "@/components/Reveal";
+import ImageFrame from "@/components/ImageFrame";
 
 export const metadata: Metadata = {
   title: "About | Real Work Learning",
@@ -154,7 +155,7 @@ export default function AboutPage() {
       {/* My Style — image + copy */}
       <section className="bg-warm-white py-20 md:py-28 px-4 md:px-8">
         <Reveal className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm order-2 lg:order-1">
+          <ImageFrame aspect="aspect-[4/3]" className="order-2 lg:order-1">
             <Image
               src="/images/website2.png"
               alt="Chris Smith facilitating a classroom workshop"
@@ -162,7 +163,7 @@ export default function AboutPage() {
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
             />
-          </div>
+          </ImageFrame>
           <div className="flex flex-col gap-6 order-1 lg:order-2">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               My style

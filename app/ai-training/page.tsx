@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import CtaSection from "@/components/CtaSection";
+import TopicChip from "@/components/TopicChip";
 
 export const metadata: Metadata = {
   title: "AI Training | Real Work Learning",
@@ -87,8 +88,8 @@ export default function AITrainingPage() {
       {/* Practical examples */}
       <section className="bg-warm-white py-20 md:py-28 px-4 md:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="flex flex-col gap-6">
+          <div className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:gap-12 items-start">
+            <div className="flex flex-col gap-6 md:sticky md:top-24">
               <SectionHeader
                 label="What AI can help with"
                 heading="Practical workplace AI examples."
@@ -98,19 +99,11 @@ export default function AITrainingPage() {
                 are some of the most common use cases we work through together.
               </p>
             </div>
-            <ul className="flex flex-col gap-3 pt-2 md:pt-14">
+            <div className="flex flex-wrap gap-2.5 md:pt-2">
               {workplaceExamples.map((ex) => (
-                <li
-                  key={ex}
-                  className="font-sans text-base text-dark-text/80 flex gap-3 items-start"
-                >
-                  <span className="text-accent-orange font-medium shrink-0 mt-0.5">
-                    &ndash;
-                  </span>
-                  {ex}
-                </li>
+                <TopicChip key={ex} label={ex} />
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
