@@ -32,17 +32,17 @@ export function LogoMark({
         <path d="M65 9 L60 15" />
       </g>
 
-      {/* Bulb glass outline */}
+      {/* Bulb glass outline — rounded dome with a short neck */}
       <path
-        d="M38 82 C33 74 24 68 24 48 C24 30 35 18 50 18 C65 18 76 30 76 48 C76 68 67 74 62 82 L38 82 Z"
+        d="M43 83 L40 69 C31 66 24 58 24 43 C24 29 36 17 50 17 C64 17 76 29 76 43 C76 58 69 66 60 69 L57 83 Z"
         stroke="currentColor"
-        strokeWidth="5"
+        strokeWidth="4.5"
         strokeLinejoin="round"
       />
 
       {/* Checklist: orange checkboxes + checks, current-color text lines */}
       <g>
-        {[35, 47, 59].map((y) => (
+        {[32, 44, 56].map((y) => (
           <g key={y}>
             <rect
               x="30"
@@ -77,10 +77,10 @@ export function LogoMark({
       </g>
 
       {/* Screw base */}
-      <rect x="40" y="84.5" width="20" height="3.4" rx="1.7" fill={orange} />
-      <rect x="43" y="89.6" width="14" height="3.4" rx="1.7" fill={orange} />
+      <rect x="42" y="85" width="16" height="3.3" rx="1.6" fill={orange} />
+      <rect x="44.5" y="89.8" width="11" height="3.3" rx="1.6" fill={orange} />
       {/* Metal tip */}
-      <rect x="45" y="94.6" width="10" height="4" rx="1.6" fill="currentColor" />
+      <rect x="46.5" y="94.4" width="7" height="4" rx="1.5" fill="currentColor" />
     </svg>
   );
 }
