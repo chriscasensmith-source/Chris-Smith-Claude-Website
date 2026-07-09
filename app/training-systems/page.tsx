@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Card from "@/components/Card";
 import CtaSection from "@/components/CtaSection";
+import Icon, { type IconName } from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Training Systems | Real Work Learning",
@@ -9,30 +10,36 @@ export const metadata: Metadata = {
     "Structured onboarding, trainer guides, competency checklists, and learning systems that help people learn the job.",
 };
 
-const systems = [
+const systems: { title: string; desc: string; icon: IconName }[] = [
   {
     title: "Role Based Onboarding",
     desc: "A clear path for new employees that shows what they should learn in the first weeks and months. Built around the actual job, not a generic checklist. New hires know what they are learning, who they are learning from, and what good performance looks like.",
+    icon: "map",
   },
   {
     title: "Trainer Guides",
     desc: "Practical guides that help trainers explain tasks, demonstrate expectations, ask better questions, and evaluate readiness. Built so any qualified trainer can deliver consistent training, not just your best person.",
+    icon: "book",
   },
   {
     title: "Competency Checklists",
     desc: "Simple tools that define what good performance looks like and how sign off should happen. Removes ambiguity about whether someone is ready. Gives trainers, learners, and managers a shared standard.",
+    icon: "checklist",
   },
   {
     title: "Knowledge Checks and Scenarios",
     desc: "Questions and workplace scenarios that help confirm whether people understand the work, not just whether they sat through training. Built around real situations, not generic multiple choice.",
+    icon: "branch",
   },
   {
     title: "Job Aids",
     desc: "Simple reference tools people can use during or after training. Step by step guides, quick reference cards, and visual process maps that reduce reliance on memory for complex or infrequent tasks.",
+    icon: "card",
   },
   {
     title: "Knowledge Capture",
     desc: "Structured interviews and documentation to capture what experienced employees know before that knowledge walks out the door. Tribal knowledge becomes teachable content.",
+    icon: "mic",
   },
 ];
 
@@ -67,7 +74,14 @@ export default function TrainingSystemsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {systems.map((s) => (
-              <Card key={s.title} variant="default" className="flex flex-col gap-3">
+              <Card
+                key={s.title}
+                variant="default"
+                className="group flex flex-col gap-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent-orange/30 hover:shadow-md"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-accent-orange/12 to-tan/20 text-navy transition-colors duration-200 group-hover:text-accent-orange">
+                  <Icon name={s.icon} className="h-5 w-5" />
+                </span>
                 <h3 className="font-serif text-lg text-dark-text leading-snug">
                   {s.title}
                 </h3>

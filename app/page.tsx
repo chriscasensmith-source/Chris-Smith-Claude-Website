@@ -8,6 +8,9 @@ import CaseStudyCard from "@/components/CaseStudyCard";
 import StatCard from "@/components/StatCard";
 import CtaSection from "@/components/CtaSection";
 import Reveal from "@/components/Reveal";
+import Icon, { type IconName } from "@/components/Icon";
+import ImageFrame from "@/components/ImageFrame";
+import WatermarkBackground from "@/components/WatermarkBackground";
 import { solutions, caseStudies } from "@/lib/projects";
 
 export const metadata: Metadata = {
@@ -16,26 +19,35 @@ export const metadata: Metadata = {
     "Chris Smith is a Dallas-based training and operations professional. Training, facilitation, and AI enablement that people can actually use, plus bespoke AI tools built around how the work really happens.",
 };
 
-const pillars = [
+const pillars: {
+  title: string;
+  desc: string;
+  href: string;
+  icon: IconName;
+}[] = [
   {
     title: "Facilitation & Workshops",
     desc: "Interactive sessions on leadership, communication, AI, and team development.",
     href: "/workshops",
+    icon: "users",
   },
   {
     title: "Training Solutions",
     desc: "Onboarding, trainer guides, competency checks, and systems that make training repeatable.",
     href: "/training-systems",
+    icon: "checklist",
   },
   {
     title: "AI Training",
     desc: "Plain-language AI workshops that help teams use tools with judgment, not hype.",
     href: "/ai-training",
+    icon: "sparkle",
   },
   {
     title: "Bespoke AI Solutions",
     desc: "Custom AI and workflow tools that solve real operations, maintenance, and training problems.",
     href: "#solutions",
+    icon: "wrench",
   },
 ];
 
@@ -109,7 +121,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative w-full aspect-[16/10] lg:aspect-[3/2] rounded-xl overflow-hidden shadow-md order-1 lg:order-2">
+            <ImageFrame
+              aspect="aspect-[16/10] lg:aspect-[3/2]"
+              className="order-1 lg:order-2"
+            >
               <Image
                 src="/images/panel3.jpg"
                 alt="Chris Smith speaking on stage at a Texas State Technical College panel"
@@ -118,7 +133,7 @@ export default function HomePage() {
                 className="object-cover"
                 priority
               />
-            </div>
+            </ImageFrame>
           </div>
         </div>
       </section>
@@ -134,7 +149,10 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {pillars.map((p) => (
               <Link key={p.title} href={p.href} className="group">
-                <div className="h-full flex flex-col gap-3 bg-soft-white rounded-xl border border-sand/40 shadow-sm p-6 transition-shadow duration-200 group-hover:shadow-md">
+                <div className="h-full flex flex-col gap-4 bg-soft-white rounded-2xl border border-tan/25 shadow-sm p-6 transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-md group-hover:border-accent-orange/30">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent-orange/12 to-tan/20 text-navy transition-colors duration-200 group-hover:text-accent-orange">
+                    <Icon name={p.icon} className="h-6 w-6" />
+                  </span>
                   <h3 className="font-serif text-[20px] md:text-[22px] text-dark-text leading-snug">
                     {p.title}
                   </h3>
@@ -152,10 +170,11 @@ export default function HomePage() {
       </section>
 
       {/* ─── Training & Enablement ────────────────────────────────── */}
-      <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
+      <section className="relative overflow-hidden bg-beige/30 py-20 md:py-28 px-4 md:px-8">
+        <WatermarkBackground position="top-right" size="h-80 w-80" opacity="opacity-[0.04]" />
+        <div className="relative max-w-[1200px] mx-auto">
           <Reveal className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
+            <ImageFrame aspect="aspect-[4/3]">
               <Image
                 src="/images/website1.png"
                 alt="A team working through a hands-on training activity on the floor"
@@ -163,7 +182,7 @@ export default function HomePage() {
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />
-            </div>
+            </ImageFrame>
             <div className="flex flex-col gap-6">
               <SectionHeader
                 label="Training & enablement"
@@ -195,9 +214,10 @@ export default function HomePage() {
       {/* ─── Featured AI Solutions ────────────────────────────────── */}
       <section
         id="solutions"
-        className="scroll-mt-24 bg-warm-white py-20 md:py-28 px-4 md:px-8"
+        className="relative scroll-mt-24 overflow-hidden bg-warm-white py-20 md:py-28 px-4 md:px-8"
       >
-        <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <WatermarkBackground position="bottom-left" size="h-96 w-96" opacity="opacity-[0.035]" />
+        <Reveal className="relative max-w-[1200px] mx-auto flex flex-col gap-12">
           <SectionHeader
             label="Bespoke AI solutions"
             heading="And when training needs a tool, I build it."
@@ -205,7 +225,9 @@ export default function HomePage() {
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {solutions.map((s) => (
-              <SolutionCard key={s.slug} solution={s} />
+              <div key={s.slug} id={s.slug} className="scroll-mt-28 flex flex-col">
+                <SolutionCard solution={s} />
+              </div>
             ))}
           </div>
         </Reveal>
@@ -237,9 +259,10 @@ export default function HomePage() {
       {/* ─── How I Build ──────────────────────────────────────────── */}
       <section
         id="process"
-        className="scroll-mt-24 bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8"
+        className="relative scroll-mt-24 overflow-hidden bg-primary-bg text-warm-white py-20 md:py-28 px-4 md:px-8"
       >
-        <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-12">
+        <WatermarkBackground position="top-right" size="h-[26rem] w-[26rem]" opacity="opacity-[0.06]" />
+        <Reveal className="relative max-w-[1200px] mx-auto flex flex-col gap-12">
           <div className="flex flex-col gap-4 max-w-[700px]">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               How I build
@@ -313,7 +336,11 @@ export default function HomePage() {
       <section className="bg-warm-white py-20 md:py-28 px-4 md:px-8">
         <div className="max-w-[1200px] mx-auto">
           <Reveal className="grid lg:grid-cols-[2fr_3fr] gap-12 items-center">
-            <div className="relative w-full max-w-[360px] aspect-[3/4] rounded-xl overflow-hidden shadow-sm mx-auto lg:mx-0">
+            <ImageFrame
+              aspect="aspect-[3/4]"
+              vignette={false}
+              className="max-w-[360px] mx-auto lg:mx-0"
+            >
               <Image
                 src="/images/Headshot.jpg"
                 alt="Portrait of Chris Smith"
@@ -321,7 +348,7 @@ export default function HomePage() {
                 sizes="(min-width: 1024px) 360px, 100vw"
                 className="object-cover"
               />
-            </div>
+            </ImageFrame>
             <div className="flex flex-col gap-6">
               <SectionHeader label="About" heading="An operator who teaches and builds." />
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">

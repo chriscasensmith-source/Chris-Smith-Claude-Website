@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
+import ImageFrame from "@/components/ImageFrame";
 
 export const metadata: Metadata = {
   title: "Contact | Real Work Learning",
@@ -47,7 +48,10 @@ export default function ContactPage() {
               on-site and remote.
             </p>
           </div>
-          <div className="relative w-full aspect-[16/10] lg:aspect-[4/3] rounded-xl overflow-hidden shadow-md order-1 lg:order-2">
+          <ImageFrame
+            aspect="aspect-[16/10] lg:aspect-[4/3]"
+            className="order-1 lg:order-2"
+          >
             <Image
               src="/images/website7.png"
               alt="A full room during one of Chris Smith's training sessions"
@@ -56,7 +60,7 @@ export default function ContactPage() {
               className="object-cover"
               priority
             />
-          </div>
+          </ImageFrame>
         </div>
       </section>
 

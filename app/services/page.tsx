@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CtaSection from "@/components/CtaSection";
+import Reveal from "@/components/Reveal";
+import ServiceDeliverableTile from "@/components/ServiceDeliverableTile";
+import TopicChip from "@/components/TopicChip";
+import WatermarkBackground from "@/components/WatermarkBackground";
 
 export const metadata: Metadata = {
   title: "Services | Real Work Learning",
@@ -173,67 +177,61 @@ export default function ServicesPage() {
       {services.map((service, i) => (
         <section
           key={service.id}
-          className={`py-20 md:py-24 px-4 md:px-8 ${
-            i % 2 === 0 ? "bg-warm-white" : "bg-soft-white"
+          id={service.id}
+          className={`relative scroll-mt-24 overflow-hidden px-4 py-20 md:px-8 md:py-24 ${
+            i % 2 === 0 ? "bg-warm-white" : "bg-beige/30"
           }`}
         >
-          <div className="max-w-[1200px] mx-auto grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-16">
-            <div className="flex flex-col gap-3 lg:sticky lg:top-24 self-start">
-              <h2 className="font-serif text-[24px] md:text-[40px] text-dark-text leading-snug">
+          <WatermarkBackground
+            position={i % 2 === 0 ? "top-right" : "bottom-left"}
+            size="h-80 w-80"
+            opacity="opacity-[0.04]"
+          />
+          <Reveal className="relative mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+            <div className="flex flex-col gap-3 self-start lg:sticky lg:top-24">
+              <span className="font-serif text-3xl leading-none text-accent-orange/80">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h2 className="font-serif text-[24px] leading-snug text-dark-text md:text-[40px]">
                 {service.title}
               </h2>
-              <div className="flex items-start gap-2">
-                <span className="text-accent-orange text-xs font-sans font-medium uppercase tracking-wider shrink-0 mt-0.5">
+              <div className="mt-1 flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 font-sans text-xs font-medium uppercase tracking-wider text-accent-orange">
                   Best for
                 </span>
-                <p className="font-sans text-sm text-dark-text/70 leading-relaxed">
+                <p className="font-sans text-sm leading-relaxed text-dark-text/70">
                   {service.bestFor}
                 </p>
               </div>
-              <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/80 mt-2">
+              <p className="mt-2 font-sans text-base leading-relaxed text-dark-text/80 md:text-lg">
                 {service.description}
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-8">
+            <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-4">
-                <span className="text-accent-orange text-xs font-sans font-medium uppercase tracking-wider">
+                <span className="font-sans text-xs font-medium uppercase tracking-wider text-accent-orange">
                   Common deliverables
                 </span>
-                <ul className="flex flex-col gap-2">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {service.deliverables.map((d) => (
-                    <li
-                      key={d}
-                      className="font-sans text-sm text-dark-text/80 flex gap-2"
-                    >
-                      <span className="text-accent-orange shrink-0 mt-0.5">
-                        &ndash;
-                      </span>
-                      {d}
-                    </li>
+                    <ServiceDeliverableTile key={d} label={d} />
                   ))}
-                </ul>
+                </div>
               </div>
-              <div className="flex flex-col gap-4">
-                <span className="text-accent-orange text-xs font-sans font-medium uppercase tracking-wider">
+
+              <div className="flex flex-col gap-4 border-t border-tan/30 pt-7">
+                <span className="font-sans text-xs font-medium uppercase tracking-wider text-accent-orange">
                   {service.examplesLabel}
                 </span>
-                <ul className="flex flex-col gap-2">
+                <div className="flex flex-wrap gap-2.5">
                   {service.examples.map((e) => (
-                    <li
-                      key={e}
-                      className="font-sans text-sm text-dark-text/80 flex gap-2"
-                    >
-                      <span className="text-accent-orange shrink-0 mt-0.5">
-                        &ndash;
-                      </span>
-                      {e}
-                    </li>
+                    <TopicChip key={e} label={e} />
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </section>
       ))}
 
