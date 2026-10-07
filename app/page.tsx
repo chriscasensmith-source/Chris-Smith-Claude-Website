@@ -10,6 +10,7 @@ import CtaSection from "@/components/CtaSection";
 import Reveal from "@/components/Reveal";
 import Icon, { type IconName } from "@/components/Icon";
 import ImageFrame from "@/components/ImageFrame";
+import BrandPanel from "@/components/BrandPanel";
 import WatermarkBackground from "@/components/WatermarkBackground";
 import { solutions, caseStudies } from "@/lib/projects";
 
@@ -74,12 +75,12 @@ const stats = [
   {
     value: "10+ years",
     label: "Leading training in demanding operations",
-    description: "From upscale hospitality to an FDA-regulated plant floor.",
+    description: "From upscale hospitality to regulated manufacturing.",
   },
   {
     value: "Hundreds",
     label: "Of employees trained and tracked",
-    description: "Across six departments and three shifts in regulated manufacturing.",
+    description: "Across departments, shifts, and very different operations.",
   },
   {
     value: "20+",
@@ -174,15 +175,12 @@ export default function HomePage() {
         <WatermarkBackground position="top-right" size="h-80 w-80" opacity="opacity-[0.04]" />
         <div className="relative max-w-[1200px] mx-auto">
           <Reveal className="grid lg:grid-cols-2 gap-12 items-center">
-            <ImageFrame aspect="aspect-[4/3]">
-              <Image
-                src="/images/website1.png"
-                alt="A team working through a hands-on training activity on the floor"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </ImageFrame>
+            <BrandPanel
+              eyebrow="Training & enablement"
+              line="Built around the job, not the slide deck."
+              icon="users"
+              className="aspect-[16/9] lg:aspect-[4/3]"
+            />
             <div className="flex flex-col gap-6">
               <SectionHeader
                 label="Training & enablement"
@@ -311,8 +309,8 @@ export default function HomePage() {
             </h2>
             <p className="font-sans text-base md:text-lg text-dark-text/70 leading-relaxed">
               For over a decade I have led training across upscale hospitality
-              and an FDA-regulated manufacturing floor, for hundreds of employees
-              spanning six departments and three shifts. I know exactly where
+              and regulated manufacturing, for hundreds of employees across
+              departments and shifts. I know exactly where
               training breaks down in real operations: knowledge trapped in a
               few people&rsquo;s heads, progress buried in spreadsheets, trainers
               stretched too thin. The AI tools I build come straight from that
@@ -354,9 +352,8 @@ export default function HomePage() {
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">
                 I&rsquo;m Chris Smith, a Dallas-based training and operations
                 professional. My background runs from hospitality training at
-                Hillstone to operations training on an FDA-regulated
-                manufacturing floor at Mary Kay, across hundreds of employees and
-                six departments. That foundation shapes how I work: structure
+                Hillstone to operations training in regulated manufacturing,
+                across hundreds of employees. That foundation shapes how I work: structure
                 plus humanity, clear standards plus room to grow.
               </p>
               <p className="font-sans text-base md:text-lg leading-relaxed text-dark-text/75">

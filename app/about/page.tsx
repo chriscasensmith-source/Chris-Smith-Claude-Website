@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaSection from "@/components/CtaSection";
 import Reveal from "@/components/Reveal";
-import ImageFrame from "@/components/ImageFrame";
+import BrandPanel from "@/components/BrandPanel";
 
 export const metadata: Metadata = {
   title: "About | Real Work Learning",
   description:
-    "Chris Smith builds training and practical AI tools for operations teams, from hospitality training at Hillstone to operations training in FDA-regulated manufacturing at Mary Kay.",
+    "Chris Smith builds training and practical AI tools for operations teams, from hospitality training at Hillstone to operations training in regulated manufacturing.",
 };
 
 const beliefs = [
@@ -56,20 +55,17 @@ export default function AboutPage() {
               ideal ones.
             </p>
             <p>
-              From there I took that discipline onto the manufacturing floor. As
-              Senior Training Specialist at Mary Kay, I own operations training
-              for a 250-person, FDA-regulated plant across six departments and
-              three shifts. I have architected 55+ role-based onboarding and
-              certified-trainer paths, run two dozen annual safety and compliance
-              sessions (OSHA, LOTO, GMP, ISO 22716) at 96% on-time completion,
-              and administer the audit-ready systems that keep the floor
-              inspection-ready.
+              From there I took that discipline into regulated manufacturing,
+              leading operations training across departments and shifts:
+              role-based onboarding, certified-trainer paths, safety and
+              compliance training, and the audit-ready records that keep an
+              operation inspection-ready.
             </p>
             <p>
-              That floor is where my AI work was born. Facing the real gaps,
-              scattered spreadsheets, knowledge locked in a few people&rsquo;s
-              heads, and trainers stretched thin, I designed and shipped tools to
-              close them: a Training Command Center, a maintenance skills-gap
+              Along the way I kept running into the same gaps: scattered
+              spreadsheets, knowledge locked in a few people&rsquo;s heads, and
+              trainers stretched thin. So I started building tools to close
+              them: a training command center, a maintenance skills-gap
               analysis, an SME knowledge-capture workflow, and more.
             </p>
             <p>
@@ -155,15 +151,12 @@ export default function AboutPage() {
       {/* My Style — image + copy */}
       <section className="bg-warm-white py-20 md:py-28 px-4 md:px-8">
         <Reveal className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <ImageFrame aspect="aspect-[4/3]" className="order-2 lg:order-1">
-            <Image
-              src="/images/website2.png"
-              alt="Chris Smith facilitating a classroom workshop"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </ImageFrame>
+          <BrandPanel
+            eyebrow="Facilitation"
+            line="Less lecture. More practice."
+            icon="chat"
+            className="order-2 aspect-[16/9] lg:order-1 lg:aspect-[4/3]"
+          />
           <div className="flex flex-col gap-6 order-1 lg:order-2">
             <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
               My style

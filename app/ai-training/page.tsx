@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import BrandPanel from "@/components/BrandPanel";
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import CtaSection from "@/components/CtaSection";
@@ -53,8 +54,14 @@ export default function AITrainingPage() {
         label="AI Training"
         heading="AI training for teams that need practical help, not hype."
         subtext="AI can help people work faster, think through problems, improve communication, and build better training materials. It can also create bad habits when people use it without judgment. My AI workshops help employees and leaders understand both sides."
-        imageSrc="/images/website5.png"
-        imageAlt="An AI training session in progress"
+        media={
+          <BrandPanel
+            eyebrow="AI training"
+            line="AI with judgment, not hype."
+            icon="sparkle"
+            tone="onDark"
+          />
+        }
       />
 
       {/* Sessions */}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import BrandPanel from "@/components/BrandPanel";
 import Card from "@/components/Card";
 import CtaSection from "@/components/CtaSection";
 import Icon, { type IconName } from "@/components/Icon";
@@ -50,8 +51,14 @@ export default function TrainingSystemsPage() {
         label="Training Systems"
         heading="Training systems that help people learn the job, not just survive the first week."
         subtext="Good onboarding and job training need more than a checklist. Employees need to know what to learn, who to learn from, how they will be evaluated, and what good performance looks like. I help teams turn scattered documents, old binders, tribal knowledge, and informal shadowing into clear training systems."
-        imageSrc="/images/website3.png"
-        imageAlt="Hands-on training around equipment on the shop floor"
+        media={
+          <BrandPanel
+            eyebrow="Training systems"
+            line="Structure that holds up on a busy day."
+            icon="checklist"
+            tone="onDark"
+          />
+        }
       />
 
       {/* System components */}
