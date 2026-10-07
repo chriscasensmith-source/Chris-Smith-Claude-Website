@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import BrandPanel from "@/components/BrandPanel";
 import CtaSection from "@/components/CtaSection";
 import Reveal from "@/components/Reveal";
 import ServiceDeliverableTile from "@/components/ServiceDeliverableTile";
@@ -170,8 +171,14 @@ export default function ServicesPage() {
         label="Services"
         heading="Practical training and facilitation services for real workplace needs."
         subtext="Whether you need a 90 minute workshop, a new onboarding program, a stronger training structure, or help making AI useful for your team, I can help turn the idea into something clear, engaging, and ready to use."
-        imageSrc="/images/website4.png"
-        imageAlt="Chris Smith presenting to a group during a session"
+        media={
+          <BrandPanel
+            eyebrow="Services"
+            line="Training people can actually use."
+            icon="layers"
+            tone="onDark"
+          />
+        }
       />
 
       {services.map((service, i) => (

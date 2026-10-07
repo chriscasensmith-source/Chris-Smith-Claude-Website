@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import BrandPanel from "@/components/BrandPanel";
 import Card from "@/components/Card";
 import CtaSection from "@/components/CtaSection";
 
@@ -151,8 +152,14 @@ export default function WorkshopsPage() {
         label="Workshops"
         heading="Workshops designed for learning that sticks."
         subtext="Most workshops are 90 minutes to 2 hours in length. This timeframe allows for real learning: introduction, demonstration, guided practice, group discussion, and practical takeaways. Each session can be customized for employees, leaders, trainers, frontline teams, or mixed groups."
-        imageSrc="/images/facilitation-activity.jpg"
-        imageAlt="Operators collaborating on a hands-on team-building activity"
+        media={
+          <BrandPanel
+            eyebrow="Workshops"
+            line="Practice, discussion, and real takeaways."
+            icon="presentation"
+            tone="onDark"
+          />
+        }
       />
 
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">

@@ -1,16 +1,15 @@
 import React from "react";
-import Image from "next/image";
 import type { CaseStudy } from "@/lib/projects";
+import SolutionGraphic from "@/components/SolutionGraphic";
 
 interface CaseStudyCardProps {
   study: CaseStudy;
-  /** Flip image to the right on desktop for an alternating layout. */
+  /** Flip the visual to the right on desktop for an alternating layout. */
   reverse?: boolean;
 }
 
 export default function CaseStudyCard({ study, reverse }: CaseStudyCardProps) {
-  const { name, category, problem, build, result, builtWith, images } = study;
-  const lead = images[0];
+  const { name, category, problem, build, result, builtWith, graphic } = study;
 
   const blocks: { label: string; text: string }[] = [
     { label: "The problem", text: problem },
@@ -25,26 +24,16 @@ export default function CaseStudyCard({ study, reverse }: CaseStudyCardProps) {
           reverse ? "lg:[&>*:first-child]:order-2" : ""
         }`}
       >
-        {/* Visual: full screenshot in an app-window frame */}
+        {/* Visual: illustrative graphic in an app-window frame */}
         <div className="p-6 md:p-8 bg-soft-white border-b lg:border-b-0 border-sand/40">
-          {lead && (
-            <div className="rounded-lg border border-sand/50 shadow-md overflow-hidden bg-white">
-              <div className="flex items-center gap-1.5 h-7 px-3 bg-soft-white border-b border-sand/40">
-                <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
-                <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
-                <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
-              </div>
-              <div className="relative aspect-[16/9] bg-white">
-                <Image
-                  src={lead.src}
-                  alt={lead.alt}
-                  fill
-                  sizes="(min-width: 1024px) 45vw, 100vw"
-                  className="object-contain object-top"
-                />
-              </div>
+          <div className="rounded-lg border border-sand/50 shadow-md overflow-hidden bg-white">
+            <div className="flex items-center gap-1.5 h-7 px-3 bg-soft-white border-b border-sand/40">
+              <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
+              <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
+              <span className="w-2.5 h-2.5 rounded-full bg-sand" aria-hidden />
             </div>
-          )}
+            <SolutionGraphic kind={graphic} className="aspect-[16/9]" />
+          </div>
         </div>
 
         {/* Copy */}

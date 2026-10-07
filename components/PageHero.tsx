@@ -8,6 +8,8 @@ interface PageHeroProps {
   subtext?: string;
   imageSrc?: string;
   imageAlt?: string;
+  /** Non-photo visual (e.g. a BrandPanel) shown beside the text on md+. */
+  media?: React.ReactNode;
   children?: React.ReactNode;
 }
 
@@ -17,6 +19,7 @@ export default function PageHero({
   subtext,
   imageSrc,
   imageAlt = "",
+  media,
   children,
 }: PageHeroProps) {
   const textContent = (
@@ -57,6 +60,11 @@ export default function PageHero({
                 priority
               />
             </ImageFrame>
+          </div>
+        ) : media ? (
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {textContent}
+            <div className="hidden md:block">{media}</div>
           </div>
         ) : (
           <div className="max-w-[700px]">{textContent}</div>
