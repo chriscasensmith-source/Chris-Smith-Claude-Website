@@ -21,7 +21,7 @@ export default function SectionHeader({
   return (
     <div className={`flex flex-col gap-3 ${alignStyles} ${className}`}>
       {label && (
-        <span className="text-accent-orange text-sm font-medium font-sans uppercase tracking-wider">
+        <span className="text-orange-ink text-sm font-medium font-sans uppercase tracking-wider">
           {label}
         </span>
       )}

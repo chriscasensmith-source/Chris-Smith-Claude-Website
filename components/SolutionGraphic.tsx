@@ -190,7 +190,7 @@ export default function SolutionGraphic({
   kind: SolutionGraphicKind;
   className?: string;
 }) {
-  if (kind === "voice") return <VoiceSessionGraphic />;
+  if (kind === "voice") return <VoiceSessionGraphic className={className} />;
   const { label, Body } = variants[kind];
   return (
     <Shell label={label} className={className}>

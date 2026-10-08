@@ -172,7 +172,7 @@ export default function WorkshopsPage() {
                     {w.title}
                   </h2>
                   <div className="flex flex-wrap gap-2">
-                    <span className="bg-accent-orange/10 text-accent-orange text-xs font-sans font-medium px-2.5 py-1 rounded-full">
+                    <span className="bg-accent-orange/10 text-orange-ink text-xs font-sans font-medium px-2.5 py-1 rounded-full">
                       {w.length}
                     </span>
                   </div>
@@ -182,7 +182,7 @@ export default function WorkshopsPage() {
                 </p>
                 <div className="border-t border-dark-text/10 pt-4 flex flex-col gap-3 mt-auto">
                   <div className="flex flex-col gap-1">
-                    <span className="text-accent-orange text-xs font-sans font-medium uppercase tracking-wider">
+                    <span className="text-orange-ink text-xs font-sans font-medium uppercase tracking-wider">
                       Audience
                     </span>
                     <p className="font-sans text-xs text-dark-text/60 leading-snug">
@@ -190,7 +190,7 @@ export default function WorkshopsPage() {
                     </p>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="text-accent-orange text-xs font-sans font-medium uppercase tracking-wider">
+                    <span className="text-orange-ink text-xs font-sans font-medium uppercase tracking-wider">
                       Participants leave with
                     </span>
                     <ul className="flex flex-col gap-1">
@@ -199,7 +199,7 @@ export default function WorkshopsPage() {
                           key={t}
                           className="font-sans text-xs text-dark-text/70 flex gap-2"
                         >
-                          <span className="text-accent-orange shrink-0">
+                          <span className="text-orange-ink shrink-0">
                             &ndash;
                           </span>
                           {t}

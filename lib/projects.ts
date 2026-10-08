@@ -101,7 +101,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "skills-gap-analysis",
-    name: "Mechanical Skills Gap Analysis Tool",
+    name: "Mechanical Skills Gap Analysis",
     category: "Maintenance",
     summary:
       "A written + practical assessment that produces a technician readiness profile and a targeted training plan.",

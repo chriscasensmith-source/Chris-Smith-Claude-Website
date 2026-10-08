@@ -76,7 +76,7 @@ export default function AITrainingPage() {
             {sessions.map((s) => (
               <Card key={s.title} className="flex flex-col gap-3">
                 <div className="flex flex-col gap-2">
-                  <span className="bg-accent-orange/10 text-accent-orange text-xs font-sans font-medium px-2.5 py-1 rounded-full self-start">
+                  <span className="bg-accent-orange/10 text-orange-ink text-xs font-sans font-medium px-2.5 py-1 rounded-full self-start">
                     {s.length}
                   </span>
                   <h3 className="font-serif text-[20px] md:text-[28px] text-dark-text leading-snug">
@@ -120,7 +120,7 @@ export default function AITrainingPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="flex flex-col gap-4 max-w-[500px]">
-              <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
+              <span className="text-orange-ink text-sm font-sans font-medium uppercase tracking-wider">
                 AI risk and judgment
               </span>
               <h2 className="font-serif text-[24px] md:text-[40px] text-dark-text leading-snug">

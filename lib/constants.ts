@@ -21,8 +21,8 @@ export interface NavNode {
   children?: { label: string; href: string }[];
 }
 
-// Structured tree — used by the Navbar. Services and AI Solutions expose
-// their subcategories as dropdowns (the flat nav previously implied
+// Structured tree — used by the Navbar. Services exposes its subcategories
+// as a dropdown (the flat nav previously implied
 // subcategories without offering them). Child links reuse existing pages and
 // homepage section anchors, so nothing new needs to be built to support them.
 export const navTree: NavNode[] = [
@@ -37,16 +37,8 @@ export const navTree: NavNode[] = [
       { label: "Frontline Learning and Workforce Development", href: "/services#frontline" },
     ],
   },
-  {
-    label: "AI Solutions",
-    href: "/#solutions",
-    children: [
-      { label: "Training Command Center", href: "/#training-command-center" },
-      { label: "Mechanical Skills Gap Analysis", href: "/#skills-gap-analysis" },
-      { label: "SME Knowledge Capture", href: "/#sme-knowledge-capture" },
-      { label: "MRP Assistant", href: "/#mrp-assistant" },
-      { label: "Difficult Conversation Voice Agent", href: "/#difficult-conversation-voice-agent" },
-    ],
-  },
+  // A plain link: the tools are the differentiator, not the headline, so
+  // they get one entry rather than a second five-item menu.
+  { label: "AI Solutions", href: "/#solutions" },
   { label: "About", href: "/about" },
 ];

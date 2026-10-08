@@ -42,7 +42,7 @@ export default function ContactPage() {
               You do not need to have the whole thing figured out. A rough idea
               is enough to start.
             </p>
-            <p className="font-sans text-sm text-warm-white/50">
+            <p className="font-sans text-sm text-warm-white/65">
               Chris Smith &middot; based in Dallas, Texas &middot; available
               on-site and remote.
             </p>
@@ -65,7 +65,7 @@ export default function ContactPage() {
             {/* Reasons */}
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-2">
-                <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
+                <span className="text-orange-ink text-sm font-sans font-medium uppercase tracking-wider">
                   Common reasons people reach out
                 </span>
               </div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                     key={r}
                     className="flex gap-3 items-start font-sans text-sm text-dark-text/80 leading-snug"
                   >
-                    <span className="text-accent-orange shrink-0 font-medium mt-0.5">
+                    <span className="text-orange-ink shrink-0 font-medium mt-0.5">
                       &ndash;
                     </span>
                     {r}

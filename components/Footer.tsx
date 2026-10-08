@@ -5,7 +5,7 @@ import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-bg text-warm-white px-4 md:px-8 py-12 md:py-16">
+    <footer className="bg-near-black text-warm-white border-t border-warm-white/10 px-4 md:px-8 py-12 md:py-16">
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           <div className="flex flex-col gap-3 max-w-sm">
@@ -20,11 +20,11 @@ export default function Footer() {
               Practical workshops, AI training, leadership development, and
               training systems for real teams doing real work.
             </p>
-            <p className="font-sans text-sm text-warm-white/50">
+            <p className="font-sans text-sm text-warm-white/65">
               Chris Smith &middot; Dallas, Texas
             </p>
           </div>
-          <nav aria-label="Footer navigation">
+          <nav id="site-nav" aria-label="Footer navigation" className="scroll-mt-24">
             <ul className="flex flex-col gap-3">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -40,7 +40,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="border-t border-warm-white/10 mt-10 pt-6">
-          <p className="font-sans text-xs text-warm-white/40">
+          <p className="font-sans text-xs text-warm-white/65">
             &copy; {new Date().getFullYear()} Real Work Learning. All rights
             reserved.
           </p>
