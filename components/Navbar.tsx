@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navTree } from "@/lib/constants";
@@ -11,11 +11,62 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSection, setOpenSection] = useState<string | null>(null);
   const pathname = usePathname();
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  // Until hydration the mobile menu button can't work, so the server renders
+  // a plain link to the footer navigation instead (works with scripts blocked).
+  const hydrated = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   const closeMobile = () => {
     setMenuOpen(false);
     setOpenSection(null);
   };
+
+  // While the mobile menu is open: move focus into it, keep Tab inside it,
+  // close on Escape, and stop the page behind it from scrolling. On close,
+  // focus returns to the button that opened it.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const overlay = overlayRef.current;
+    const opener = menuButtonRef.current;
+    const focusables = () =>
+      Array.from(
+        overlay?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? [],
+      );
+    focusables()[0]?.focus();
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+        setOpenSection(null);
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const items = focusables();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+      opener?.focus();
+    };
+  }, [menuOpen]);
 
   return (
     <>
@@ -50,44 +101,84 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="bg-accent-orange text-white text-sm font-semibold font-sans rounded-lg px-5 py-2 hover:bg-orange-600 hover:shadow-md transition-all duration-200 whitespace-nowrap shrink-0 min-h-[36px] flex items-center"
+            className="bg-accent-orange text-navy text-sm font-semibold font-sans rounded-lg px-5 py-2 hover:bg-orange-bright hover:shadow-md transition-all duration-200 whitespace-nowrap shrink-0 min-h-[36px] flex items-center"
           >
             Start a Conversation
           </Link>
         </nav>
 
         {/* Mobile: compact bar */}
-        <nav className="md:hidden bg-primary-bg/95 backdrop-blur-sm rounded-2xl px-4 py-3 flex items-center justify-between shadow-md">
+        <nav className="md:hidden bg-primary-bg/95 backdrop-blur-sm rounded-2xl pl-3.5 pr-2 py-2.5 flex items-center justify-between gap-3 shadow-md">
           <Logo
-            markClassName="h-7 w-7 text-warm-white"
-            textClassName="font-serif text-base font-semibold text-warm-white"
+            markClassName="h-7 w-7 shrink-0 text-warm-white"
+            textClassName="font-serif text-[15px] font-semibold text-warm-white whitespace-nowrap"
           />
-          <button
-            type="button"
-            aria-label="Open menu"
-            onClick={() => setMenuOpen(true)}
-            className="text-warm-white p-1 min-h-[44px] min-w-[44px] flex items-center justify-center"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="flex shrink-0 items-center gap-1">
+            <Link
+              href="/contact"
+              className="flex min-h-[44px] items-center rounded-lg bg-accent-orange px-3 font-sans text-sm font-semibold text-navy transition-colors duration-200 hover:bg-orange-bright"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+              Contact
+            </Link>
+            {hydrated ? (
+              <button
+                ref={menuButtonRef}
+                type="button"
+                aria-label="Open menu"
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen(true)}
+                className="text-warm-white p-1 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              >
+                <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              </button>
+            ) : (
+              <a
+                href="#site-nav"
+                aria-label="Site menu"
+                className="text-warm-white p-1 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              >
+                <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              </a>
+            )}
+          </div>
         </nav>
       </header>
 
       {/* Mobile: full-screen overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[100] bg-primary-bg flex flex-col md:hidden overflow-y-auto">
+        <div
+          ref={overlayRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site menu"
+          className="fixed inset-0 z-[100] bg-primary-bg flex flex-col md:hidden overflow-y-auto"
+        >
           {/* Overlay header */}
           <div className="flex items-center justify-between px-4 py-4 border-b border-warm-white/10">
             <Logo
@@ -198,7 +289,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={closeMobile}
-              className="mt-8 inline-flex items-center bg-accent-orange text-white font-sans text-sm font-semibold rounded-lg px-6 py-3 min-h-[44px] hover:bg-orange-600 transition-colors duration-200"
+              className="mt-8 inline-flex items-center bg-accent-orange text-navy font-sans text-sm font-semibold rounded-lg px-6 py-3 min-h-[44px] hover:bg-orange-bright transition-colors duration-200"
             >
               Start a Conversation
             </Link>
@@ -206,7 +297,7 @@ export default function Navbar() {
 
           {/* Overlay footer */}
           <div className="px-6 py-6 border-t border-warm-white/10">
-            <p className="font-sans text-xs text-warm-white/40">
+            <p className="font-sans text-xs text-warm-white/65">
               Less lecture. More practice. Better results.
             </p>
           </div>

@@ -196,14 +196,14 @@ export default function ServicesPage() {
           />
           <Reveal className="relative mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
             <div className="flex flex-col gap-3 self-start lg:sticky lg:top-24">
-              <span className="font-serif text-3xl leading-none text-accent-orange/80">
+              <span className="font-serif text-3xl leading-none text-orange-ink">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h2 className="font-serif text-[24px] leading-snug text-dark-text md:text-[40px]">
                 {service.title}
               </h2>
               <div className="mt-1 flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 font-sans text-xs font-medium uppercase tracking-wider text-accent-orange">
+                <span className="mt-0.5 shrink-0 font-sans text-xs font-medium uppercase tracking-wider text-orange-ink">
                   Best for
                 </span>
                 <p className="font-sans text-sm leading-relaxed text-dark-text/70">
@@ -217,7 +217,7 @@ export default function ServicesPage() {
 
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-4">
-                <span className="font-sans text-xs font-medium uppercase tracking-wider text-accent-orange">
+                <span className="font-sans text-xs font-medium uppercase tracking-wider text-orange-ink">
                   Common deliverables
                 </span>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -228,7 +228,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="flex flex-col gap-4 border-t border-tan/30 pt-7">
-                <span className="font-sans text-xs font-medium uppercase tracking-wider text-accent-orange">
+                <span className="font-sans text-xs font-medium uppercase tracking-wider text-orange-ink">
                   {service.examplesLabel}
                 </span>
                 <div className="flex flex-wrap gap-2.5">

@@ -42,11 +42,16 @@ export default function ContactForm() {
         form.reset();
       } else {
         setStatus("error");
-        setError(data.message ?? "Something went wrong. Please try again.");
+        setError(
+          data.message ??
+            "Your message didn’t send. What you wrote is still here, so please try again in a moment.",
+        );
       }
     } catch {
       setStatus("error");
-      setError("Network error. Please try again, or email me directly.");
+      setError(
+        "Your message couldn’t reach the server. What you wrote is still here. Please try again in a moment; if it keeps failing, your network may be blocking the form, so try again from another connection.",
+      );
     }
   }
 
@@ -60,8 +65,8 @@ export default function ContactForm() {
           Thanks! Your message is on its way.
         </h2>
         <p className="font-sans text-base text-dark-text/70 leading-relaxed">
-          I&rsquo;ll get back to you shortly. In the meantime, feel free to
-          reply to the confirmation or reach out directly.
+          It comes straight to me, and I&rsquo;ll get back to you at the
+          email address you gave.
         </p>
       </div>
     );
@@ -73,7 +78,7 @@ export default function ContactForm() {
         <h2 className="font-serif text-[24px] md:text-[40px] text-dark-text leading-snug">
           Send a message
         </h2>
-        <p className="font-sans text-sm text-dark-text/50">
+        <p className="font-sans text-sm text-dark-text/65">
           A rough idea is enough to start. I&rsquo;ll follow up by email.
         </p>
       </div>
@@ -204,7 +209,7 @@ export default function ContactForm() {
         </div>
 
         {status === "error" && error && (
-          <p role="alert" className="font-sans text-sm text-accent-orange">
+          <p role="alert" className="font-sans text-sm text-orange-ink">
             {error}
           </p>
         )}
@@ -212,7 +217,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="bg-accent-orange text-white font-sans text-base font-semibold rounded-lg px-6 py-3 min-h-[44px] self-start hover:bg-orange-600 hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="bg-accent-orange text-navy font-sans text-base font-semibold rounded-lg px-6 py-3 min-h-[44px] self-start hover:bg-orange-bright hover:shadow-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {status === "submitting" ? "Sending…" : "Send Message"}
         </button>

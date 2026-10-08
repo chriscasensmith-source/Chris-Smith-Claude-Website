@@ -86,7 +86,7 @@ export default function AboutPage() {
               need accountability. They need to prepare people for the real
               conditions they will face.
             </p>
-            <p className="font-serif text-lg text-accent-orange italic">
+            <p className="font-serif text-lg text-orange-ink italic">
               Less lecture. More practice. Better results.
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function AboutPage() {
                   key={item}
                   className="flex gap-3 items-start text-sm md:text-base text-dark-text/80 leading-relaxed"
                 >
-                  <span className="text-accent-orange shrink-0 font-medium mt-0.5">
+                  <span className="text-orange-ink shrink-0 font-medium mt-0.5">
                     &ndash;
                   </span>
                   {item}
@@ -123,7 +123,7 @@ export default function AboutPage() {
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
         <Reveal className="max-w-[1200px] mx-auto flex flex-col gap-10">
           <div className="flex flex-col gap-3 max-w-[640px]">
-            <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
+            <span className="text-orange-ink text-sm font-sans font-medium uppercase tracking-wider">
               What I believe
             </span>
             <h2 className="font-serif text-[24px] md:text-[40px] text-dark-text leading-snug">
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 key={b}
                 className="flex flex-col gap-3 bg-warm-white rounded-xl border border-sand/40 shadow-sm p-6"
               >
-                <span className="font-serif text-accent-orange text-2xl md:text-3xl leading-none">
+                <span className="font-serif text-orange-ink text-2xl md:text-3xl leading-none">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="font-sans text-base leading-relaxed text-dark-text/80">
@@ -158,7 +158,7 @@ export default function AboutPage() {
             className="order-2 aspect-[16/9] lg:order-1 lg:aspect-[4/3]"
           />
           <div className="flex flex-col gap-6 order-1 lg:order-2">
-            <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
+            <span className="text-orange-ink text-sm font-sans font-medium uppercase tracking-wider">
               My style
             </span>
             <h2 className="font-serif text-[24px] md:text-[40px] text-dark-text leading-snug">

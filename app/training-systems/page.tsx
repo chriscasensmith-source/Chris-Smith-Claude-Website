@@ -65,7 +65,7 @@ export default function TrainingSystemsPage() {
       <section className="bg-soft-white py-20 md:py-28 px-4 md:px-8">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
           <div className="flex flex-col gap-3 max-w-[760px] mx-auto items-center text-center">
-            <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
+            <span className="text-orange-ink text-sm font-sans font-medium uppercase tracking-wider">
               What I build
             </span>
             <h2 className="font-serif text-[24px] md:text-[40px] text-dark-text leading-snug">
@@ -106,7 +106,7 @@ export default function TrainingSystemsPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="flex flex-col gap-6">
-              <span className="text-accent-orange text-sm font-sans font-medium uppercase tracking-wider">
+              <span className="text-orange-ink text-sm font-sans font-medium uppercase tracking-wider">
                 How I approach it
               </span>
               <h2 className="font-serif text-[24px] md:text-[40px] text-dark-text leading-snug">

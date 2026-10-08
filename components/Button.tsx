@@ -14,12 +14,12 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-accent-orange text-white hover:bg-orange-600 hover:shadow-md active:bg-orange-700",
+    "bg-accent-orange text-navy hover:bg-orange-bright hover:shadow-md active:bg-accent-orange",
   secondary:
     "border border-dark-text text-dark-text hover:bg-dark-text hover:text-warm-white",
   ghost:
     "border border-warm-white/60 text-warm-white hover:bg-warm-white hover:text-dark-text",
-  text: "text-accent-orange hover:underline underline-offset-4",
+  text: "text-orange-ink hover:underline underline-offset-4",
 };
 
 const base =

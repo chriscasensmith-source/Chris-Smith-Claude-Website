@@ -13,11 +13,18 @@ const BARS = Array.from({ length: 32 }, (_, i) =>
  * Agent — a voice tool has no dashboard to screenshot, so this on-brand
  * mock (pulsing mic + animated waveform) stands in. Respects reduced motion.
  */
-export default function VoiceSessionGraphic() {
+export default function VoiceSessionGraphic({
+  className = "aspect-[16/10]",
+}: {
+  className?: string;
+}) {
   const reduceMotion = useReducedMotion();
 
   return (
-    <div className="relative w-full aspect-[16/10] border-b border-sand/40 bg-primary-bg overflow-hidden flex flex-col items-center justify-center gap-5 p-6">
+    <div
+      aria-hidden
+      className={`relative w-full bg-primary-bg overflow-hidden flex flex-col items-center justify-center gap-5 p-6 ${className}`}
+    >
       {/* soft accent glow */}
       <div
         aria-hidden
